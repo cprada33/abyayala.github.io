@@ -1,0 +1,183 @@
+/* GENERAL */
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0vw;
+}
+
+/* NAVIGATOR */
+
+.img-nav {
+    width: 100vw;
+    padding: 0% 30% 1% 30%;
+    background-color: #47b4ed;
+}
+.navbar-collapse {
+    width: 100vw;
+    justify-content: space-around;
+    border: 0.5mm solid;
+    border-color: black;
+    font-size: 1.2vw;
+}
+
+/* BANNER */
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    background-image: url(../imagenes/CopiaUnnamed.jpg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    align-items: center;
+}
+
+.text-front {
+    color: white;
+    font-size: 12vw;
+    font-family: 'Montserrat', sans-serif;
+    align-self: flex-end;
+    padding-top: 8vw;
+}
+
+.reserva {
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    width: 66vw;
+    background-color: white;
+    border: 1mm solid;
+    border-color: #47b4ed;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+}
+
+.divreserva {
+    padding: 3vw 0 8vw 0;
+}
+
+/* INFORMACION DE CABANAS */
+
+.cabanas {
+    width: 30vw;
+    height: auto;
+}
+
+.secCabanas {
+    background: linear-gradient(180deg, #47b4ed, rgb(250,250,250));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    max-height: 600px;
+    justify-items: center;
+    align-items: center;
+}
+
+.titcab {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    color: white;
+    font-size: 2.5vw;
+    padding: 2vh;
+}
+
+.precio {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #47b4ed;
+    font-size: 2vw;
+    padding-top: 1vh;
+}
+
+/* LOCATION */
+
+.hlocation {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: #47b4ed;
+    font-size: 250%;
+    text-align: center;
+}
+ 
+.dlocation {
+    display: inline;
+    top: 100%;
+}
+
+#dlocation {
+    height: 450;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    padding: 3% 0 3% 0;
+    background-color:#47b4ed;
+}
+
+.formc {
+    border: none;
+}
+
+.labelformcontact {
+    display: block;
+}
+
+.imgsafari {
+    width: 500px;
+    height: auto;
+}
+
+.cabanasafari {
+    display: flex;
+    align-items: center;
+}
+
+.imagenbanner {
+    width: 50%;
+    height: 50%;
+}
+
+.imgdeporte {
+    width: 20%;
+    height: 20%;
+}
+
+.secdeportes {
+    display: flex;
+    height: auto;
+    gap: 5%;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.titdeportes {
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
+.secvideoexp {
+    display: flex;
+    align-items: center;
+}
+
+.titsomos {
+    color: black;
+    font-size: 500%;
+    position: relative;
+}
+
+.imgsomos {
+    width: 100%;
+    height: auto;
+}
+
+.storyfamily {
+    width: 70%;
+    text-align: center;
+    padding: 0 0 0 15%;
+}
