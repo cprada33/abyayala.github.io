@@ -29,6 +29,7 @@ body {
     background-size: 100vw;
     background-repeat: no-repeat;
     align-items: center;
+    height: 52vh;
 }
 
 .text-front {
@@ -223,4 +224,34 @@ h1 {
     width: 70%;
     text-align: center;
     padding: 0 0 0 15%;
+}
+
+
+/* MEDIA QUERIES */
+/*TABLET */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* CELULAR */
+@media only screen and (max-width: 576px) {
+
+    .img-nav {
+        height: 15vh;
+        padding: 0 0 0 0;
+    }
+
+    .navbar-collapse {
+        font-size: 3vw;
+    }
+
+    .banner {
+        height: 35vh;
+    }
+
+    secCabanas {
+        grid-template-columns: 100%;
+    }
+
+    
 }
