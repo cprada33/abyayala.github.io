@@ -57,7 +57,7 @@ body {
 
 .reservagrid {
     display: grid;
-    grid-template-columns: 15vw 15vw 15vw 15vw;
+    grid-template-columns: 27vw 25vw 14vw;
     grid-template-rows: auto;
     background-color: white;
 
@@ -168,7 +168,6 @@ body {
 }
 
 .imgsafari {
-    width: 500px;
     height: auto;
 }
 
@@ -249,9 +248,48 @@ h1 {
         height: 35vh;
     }
 
-    secCabanas {
-        grid-template-columns: 100%;
+    .secCabanas {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
     }
 
-    
+    .titancestral {
+        order: -3;
+    }
+
+    .titsafari {
+        order: 1;
+    }
+
+    .imgsafari {
+        order: 2;
+    }
+
+    .imgancestral {
+        order: -2;
+    }
+
+    .prancestral {
+        order: -1;
+    }
+
+    .prsafari {
+        order: 3;
+    }
+
+    .titcab {
+        font-size: 7vw;
+    }
+    .cabanas {
+        width: 60vw;
+    }
+
+    .precio {
+        font-size: 5vw;
+    }
+
+    .location {
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto;
+    }
 }
