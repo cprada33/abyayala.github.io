@@ -172,15 +172,21 @@ body {
     height: auto;
 }
 
+.imgsafarica {
+    width: 65vw;
+}
+
 .cabanasafari {
     display: flex;
     align-items: center;
+    gap: 1vw;
 }
 
 .imagenbanner {
     width: 50%;
     height: 50%;
 }
+/* ACTIVIDADES */
 
 .secdeportes {
     display: flex;
@@ -208,15 +214,25 @@ h1 {
     font-weight: 800;
 }
 
-.secvideoexp {
+/* CABANAS */
+
+.titcabanapage {
+    text-align: center;
+}
+
+
+/* QUIENES SOMOS */
+
+.bannersomos {
     display: flex;
-    align-items: center;
+    flex-direction: column;
 }
 
 .titsomos {
-    color: black;
+    color:#47b4ed;
     font-size: 500%;
     position: relative;
+    font-size: 5vw;
 }
 
 .imgsomos {
@@ -228,6 +244,46 @@ h1 {
     width: 70%;
     text-align: center;
     padding: 0 0 0 15%;
+}
+
+.psomos {
+    width: 80vw;
+    align-self: center;
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.nuestrassomos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+
+.imgsomos2 {
+    align-self: flex-end;
+    grid-row: 1/4;
+    border: 2em solid;
+    border-color: #47b4ed;
+    margin: 0 0 0 2vw;
+}
+.imgsomoss2 {
+    width: 100%;
+}
+
+.botonsomos {
+    border: 0.1em solid;
+    display: inline-block;
+}
+
+.titbannercabanas {
+    font-size: 3vw;
+}
+
+.divtitbannercabanas {
+    align-self: self-end;
+    justify-self: center;
 }
 
 
