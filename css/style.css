@@ -26,10 +26,11 @@ body {
     display: flex;
     flex-direction: column;
     background-image: url(../imagenes/CopiaUnnamed.jpg);
-    background-size: 100vw;
+    background-size: cover;
     background-repeat: no-repeat;
     align-items: center;
-    height: 52vh;
+    background-position: center;
+    height: 54vh;
 }
 
 .text-front {
@@ -181,17 +182,21 @@ body {
     height: 50%;
 }
 
-.imgdeporte {
-    width: 20%;
-    height: 20%;
-}
-
 .secdeportes {
     display: flex;
     height: auto;
-    gap: 5%;
     justify-content:center;
     flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    gap: 2vh;
+}
+
+.pdeportes {
+    background-color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 2vw;
 }
 
 .titdeportes {
@@ -233,6 +238,8 @@ h1 {
 }
 
 /* CELULAR */
+
+/* HOME */
 @media only screen and (max-width: 576px) {
 
     .img-nav {
@@ -307,5 +314,19 @@ h1 {
 
     .correo {
         font-size: 2vw;
+    }
+
+    /* ACTIVIDADES */
+
+    .secdeportes {
+        flex-direction: column;
+        align-content: center;
+        text-align: center;
+        background-image: url(../imagenes/abstract-template.jpeg);
+        padding: 4vh 0;
+    }
+
+    .imgdeporte {
+        width: 70vw;
     }
 }
