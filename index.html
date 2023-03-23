@@ -49,23 +49,34 @@
                 <h1 class="text-front">BIENVENIDO</h1>
             </div>
 
-            <div class="divreserva">
-                <fieldset class="reserva">
+            <!-- <div class="divreserva"> -->
+                <!-- <fieldset class="reserva">
                     <form action="">
-                        <label for="check-in">Fecha de ingreso</label>
-                        <input type="date" name="check-in" id="check-in">
-                        <label for="check-out">Fecha de salida</label>
-                        <input type="date" name="check-out" id="check-out">
+                        
+                        
+
+                        <label for="personas">Cantidad de personas</label>
+                        <input class="cuadrosr" type="number" name="personas" id="personas">
+                    </form>
+                </fieldset> -->
+            <!-- </div> -->
+
+                <div class="reservagrid">
+                    <div>
                         <select name="cabanas" id="cabanas">
                             <option value="1">Cabaña Safari</option>
                             <option value="2">Cabaña Ancestral</option>
-                        </select>
-                        <label for="personas">Cantidad de personas</label>
-                        <input class="cuadrosr" type="number" name="personas" id="personas">
+                        </select>                    </div>
+                    <div>
+                        <input type="date" name="check-out" id="check-out">
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
                         <input value="Reservar" type="submit" name="submit" id="submit">
-                    </form>
-                </fieldset>
-            </div>
+                    </div>
+                </div>
             
         </section>
 
@@ -93,25 +104,24 @@
         <section class="location">
             <h3 class="hlocation" >¿CÓMO LLEGAR?</h3>
             <div id="dlocation">
-                <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d254408.03853972073!2d-74.39157541379505!3d4.918645356227185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8e3f9bf8054fdd45%3A0x51e46a5a7a9a8e79!2sPortal%2080%20-%20TransMilenio%2C%20Calle%2080a%2C%20Bogot%C3%A1!3m2!1d4.7097263!2d-74.1103439!4m5!1s0x8e408db994d6b66d%3A0x95036d19d28350b2!2sAbya%20Yala%20Hostel%2C%20vereda%20pinzaima%2C%20Nimaima%2C%20Cundinamarca!3m2!1d5.1269485!2d-74.392614!5e0!3m2!1ses-419!2sco!4v1676955998396!5m2!1ses-419!2sco" width="46%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div class="dlocation">
-                    TRANSPORTE PÚBLICO 
-                </div>
-                <div class="dlocation">
-                    Horario flota aguila
-                </div>
-                <div class="dlocation">
-                    
-                </div>
-                <div class="dlocation">
-
-                </div>
+            <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d254408.03853972073!2d-74.39157541379505!3d4.918645356227185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x8e3f9bf8054fdd45%3A0x51e46a5a7a9a8e79!2sPortal%2080%20-%20TransMilenio%2C%20Calle%2080a%2C%20Bogot%C3%A1!3m2!1d4.7097263!2d-74.1103439!4m5!1s0x8e408db994d6b66d%3A0x95036d19d28350b2!2sAbya%20Yala%20Hostel%2C%20vereda%20pinzaima%2C%20Nimaima%2C%20Cundinamarca!3m2!1d5.1269485!2d-74.392614!5e0!3m2!1ses-419!2sco!4v1676955998396!5m2!1ses-419!2sco" width="1000vw" height="600vw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>    
+            <div class="divlocation">
+                <p class="dlocation">TRANSPORTE PÚBLICO</p>
+                <p>HORARIOS FLOTA AGUILA</p>
+                <p>Buses directos para Nimaima desde Portal de la 80:</p>
+                <p>5:10 am</p>
+                <p>8:50 am</p>
+                <p>4:10 pm</p>
+            </div>
+            <div class="divlocation segundo">
+                <p class="dlocation">¡Te esperamos!</p>
             </div>
         </section>
     </main>
     <footer>
         <section class="footer">
-            <h3>reservas.abyayalahostel@gmail.com</h3>
+            <h3 class="correo">reservas.abyayalahostel@gmail.com</h3>
             <div>Puedes entregar tu habitación y seguir disfrutando de nuestros servicios Abya Yala Hostel hasta las 5:00pm.</div>
             <div>Copyright @ ABYA YALA HOSTEL Nimaima, Cundinamarca</div>
         </section>

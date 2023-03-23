@@ -14,7 +14,7 @@ body {
 }
 .navbar-collapse {
     width: 100vw;
-    justify-content: space-around;
+    justify-content: center;
     border: 0.5mm solid;
     border-color: black;
     font-size: 1.2vw;
@@ -54,6 +54,14 @@ body {
     padding: 3vw 0 8vw 0;
 }
 
+.reservagrid {
+    display: grid;
+    grid-template-columns: 15vw 15vw 15vw 15vw;
+    grid-template-rows: auto;
+    background-color: white;
+    
+}
+
 /* INFORMACION DE CABANAS */
 
 .cabanas {
@@ -66,7 +74,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
-    max-height: 600px;
     justify-items: center;
     align-items: center;
 }
@@ -90,21 +97,43 @@ body {
 
 /* LOCATION */
 
+.location {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: auto auto auto;
+}
+
 .hlocation {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     color: #47b4ed;
-    font-size: 250%;
+    font-size: 4vw;
     text-align: center;
+    grid-column: 1/3;
 }
  
-.dlocation {
-    display: inline;
-    top: 100%;
+#dlocation {
+    grid-row: 2/4;
+    justify-self: center;
 }
 
-#dlocation {
-    height: 450;
+.dlocation {
+    font-size: 2vw;
+    font-weight: 800;
+    color: #47b4ed;
+}
+
+.divlocation {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.segundo {
+    align-self: flex-start;
 }
 
 /* FOOTER */
@@ -113,6 +142,11 @@ body {
     text-align: center;
     padding: 3% 0 3% 0;
     background-color:#47b4ed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.correo {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .formc {
