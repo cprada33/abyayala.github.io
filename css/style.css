@@ -250,7 +250,7 @@ h1 {
     width: 80vw;
     align-self: center;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.5em;
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
 }
@@ -258,7 +258,9 @@ h1 {
 .nuestrassomos {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    padding: 0 0 4vh 0;
 }
 
 .imgsomos2 {
@@ -275,17 +277,48 @@ h1 {
 .botonsomos {
     border: 0.1em solid;
     display: inline-block;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 .titbannercabanas {
     font-size: 3vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
 }
 
 .divtitbannercabanas {
     align-self: self-end;
-    justify-self: center;
 }
 
+.parrafobanner {
+    width: 40vw;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.divparrafobanner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTACTO */
+
+.tituloform {
+    text-align: center;
+}
+
+.gridform {
+    display: flex;
+    justify-content: center;
+}
+
+.flexform {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 /* MEDIA QUERIES */
 /*TABLET */
