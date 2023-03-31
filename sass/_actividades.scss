@@ -1,0 +1,34 @@
+/* ACTIVIDADES */
+
+.secdeportes {
+    display: flex;
+    height: auto;
+    justify-content:center;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    gap: 2vh;
+}
+
+.pdeportes {
+    background-color: white;
+    margin: 0;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.titdeportes {
+    text-align: center;
+    font-size: 4vw;
+    color: #47b4ed;
+}
+
+.imgdeporte {
+    width: 40vw;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+
