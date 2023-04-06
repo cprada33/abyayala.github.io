@@ -6,28 +6,16 @@
     color: #47b4ed;
 }
 
-.parrafocabanas {
-    font-size: 1.4vw;
-    width: 50vw;
-    padding: 2vw;
-}
-
-.imgsafari {
-    height: auto;
-}
-
-.imgsafarica {
-    width: 65vw;
-}
-
 .cabanasafari {
     display: flex;
     align-items: center;
     gap: 1vw;
+    .imgsafarica {
+        width: 65vw;
+    }
+    .parrafocabanas {
+        font-size: 1.4vw;
+        width: 50vw;
+        padding: 2vw;
+    }
 }
-
-.imagenbanner {
-    width: 50%;
-    height: 50%;
-}
-

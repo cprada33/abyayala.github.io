@@ -4,62 +4,49 @@
     display: grid;
     grid-template-columns: 30vw 70vw;
     grid-template-rows: repeat(5, 1fr);
-}
-
-.imggridbanner {
-    width: 35vw;
-    grid-row: 1/6;
-}
-
-.text-gridbanner {
-    color:#47b4ed;
-    font-size: 8vw;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.text-gridbanner-parent {
-    align-self: center;
-    justify-self: center;
-}
-
-.text-gridbanner.blue {
-    color: #04848d;
-}
-
-.parrafogridbanner-parent {
-    align-self: center;
-    display: flex;
-    justify-content: center;
-}
-
-.parrafogridbanner {
-    font-size: 1.5vw;
-    text-align: center;
-    width: 80%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.buttonparent {
-    display: flex;
-    justify-content: center;
-}
-
-.buttonreserva {
-    font-size: 2vw;
-    font-family: 'Montserrat', sans-serif;
-    background-color:#47b4ed;
-    padding: 4%;
-    border: #04848d 0.3vw solid;
-    border-radius: 7%;
+    .imggridbanner {
+        width: 35vw;
+        grid-row: 1/6;
+    }
+    .text-gridbanner-parent {
+        align-self: center;
+        justify-self: center;
+        .text-gridbanner {
+            color:#47b4ed;
+            font-size: 8vw;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .text-gridbanner.blue {
+            color: #04848d;
+        }
+    }
+    .parrafogridbanner-parent {
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        .parrafogridbanner {
+            font-size: 1.5vw;
+            text-align: center;
+            width: 80%;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+    .buttonparent {
+        display: flex;
+        justify-content: center;
+        .buttonreserva {
+            font-size: 2vw;
+            font-family: 'Montserrat', sans-serif;
+            background-color:#47b4ed;
+            padding: 4%;
+            border: #04848d 0.3vw solid;
+            border-radius: 7%;
+        }
+    }
 }
 
 
 /* INFORMACION DE CABANAS */
-
-.cabanas {
-    width: 30vw;
-    height: auto;
-}
 
 .secCabanas {
     background: linear-gradient(180deg, #47b4ed, rgb(250,250,250));
@@ -68,38 +55,28 @@
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
-}
-
-.titcab {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    color: white;
-    font-size: 2.5vw;
-    padding: 2vh;
-}
-
-.precio {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    color: #47b4ed;
-    font-size: 2vw;
-    padding-top: 1vh;
+    .titcab {
+        font-family: 'Montserrat', sans-serif;
+        font-style: italic;
+        font-weight: 500;
+        color: white;
+        font-size: 2.5vw;
+        padding: 2vh;
+    }
+    .precio {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        color: #47b4ed;
+        font-size: 2vw;
+        padding-top: 1vh;
+    }
+    .cabanas {
+        width: 30vw;
+        height: auto;
+    }
 }
 
 /* BANNER FOTOS */
-
-.divimgbannerfotos {
-    height: 100%;
-    width: 100%;
-}
-
-.imgbannerfotos {
-    width: 100%;
-    height: 100%;
-    border-radius: 15%;
-    object-fit: cover;
-}
 
 .bannerfotos {
     display: grid;
@@ -107,6 +84,16 @@
     grid-template-rows: 30vh 30vh;
     padding: 1vw;
     gap: 1vw;
+    .divimgbannerfotos {
+        height: 100%;
+        width: 100%;
+        .imgbannerfotos {
+            width: 100%;
+            height: 100%;
+            border-radius: 15%;
+            object-fit: cover;
+        }
+    }
 }
 
 /* LOCATION */
@@ -115,72 +102,47 @@
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 40vw 60vw;
-}
-
-.hlocation {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    color: #04848d;
-    font-size: 7vw;
-    text-align: center;
-    grid-column: 1/3;
-    padding-top: 20px;
-}
- 
-#dlocation {
-    grid-row: 2/4;
-    justify-self: center;
-    width: 100%;
-    height: 100%;
-    padding: 1vw;
-}
-
-.dlocation {
-    font-size: 4vw;
-    font-weight: 800;
-    color: #47b4ed;
-}
-
-.dlocation.final {
-    font-size: 2.5vw;
-    font-weight: 800;
-    color: #47b4ed;
-}
-
-.divlocation {
-    display: flex;
-    justify-self: center;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    align-self: center;
-    width: 100%;
-    height: 100%;
-    font-size: 1vw;
-}
-
-.horariosLocation {
-    flex: 1;
-}
-
-.segundo {
-    align-self: flex-start;
-}
-
-/* FOOTER */
-
-.footer {
-    text-align: center;
-    padding: 3% 0 3% 0;
-    background-color:#47b4ed;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.correo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2vw;
-}
-
-.textfooter {
-    font-size: 1vw;
+    .hlocation {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        color: #04848d;
+        font-size: 7vw;
+        text-align: center;
+        grid-column: 1/3;
+        padding-top: 20px;
+    }
+    #dlocation {
+        grid-row: 2/4;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        padding: 1vw;
+    }
+    .divlocation {
+        display: flex;
+        justify-self: center;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        font-size: 1vw;
+        .dlocation {
+            font-size: 4vw;
+            font-weight: 800;
+            color: #47b4ed;
+        }
+        .horariosLocation {
+            flex: 1;
+        }
+    }
+    .divlocation .segundo {
+        align-self: flex-start;
+        .dlocation.final {
+            font-size: 2.5vw;
+            font-weight: 800;
+            color: #47b4ed;
+        }
+    }
 }

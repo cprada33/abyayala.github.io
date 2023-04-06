@@ -1,35 +1,26 @@
 /* QUIENES SOMOS */
 
-.bannersomos {
-    display: flex;
-    flex-direction: column;
-}
-
-.titsomos {
-    color:#47b4ed;
-    font-size: 500%;
-    position: relative;
-    font-size: 5vw;
-}
-
 .imgsomos {
     width: 100%;
     height: auto;
 }
 
-.storyfamily {
-    width: 70%;
-    text-align: center;
-    padding: 0 0 0 15%;
-}
-
-.psomos {
-    width: 80vw;
-    align-self: center;
-    text-align: center;
-    font-size: 1.4vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+.bannersomos {
+    display: flex;
+    flex-direction: column;
+    .titsomos {
+        color:#47b4ed;
+        position: relative;
+        font-size: 5vw;
+    }
+    .psomos {
+        width: 80vw;
+        align-self: center;
+        text-align: center;
+        font-size: 1.4vw;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+    }
 }
 
 .nuestrassomos {
@@ -38,46 +29,40 @@
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     padding: 2vh 0 4vh 0;
-}
-
-.imgsomos2 {
-    align-self: flex-end;
-    grid-row: 1/4;
-    border: 2em solid;
-    border-color: #47b4ed;
-    margin: 0 0 0 2vw;
-}
-.imgsomoss2 {
-    width: 100%;
-    height: 80vh;
-}
-
-.botonsomos {
-    border: 0.1em solid;
-    display: inline-block;
-    text-align: center;
-    font-size: 1vw;
-    width: auto;
-}
-
-.titbannercabanas {
-    font-size: 4vw;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-}
-
-.divtitbannercabanas {
-    align-self: self-end;
-}
-
-.parrafobanner {
-    width: 40vw;
-    text-align: center;
-    font-size: 1.2vw;
-}
-
-.divparrafobanner {
-    height: auto;
-    display: flex;
-    flex-direction: column;
+    .imgsomos2 {
+        align-self: flex-end;
+        grid-row: 1/4;
+        border: 2em solid;
+        border-color: #47b4ed;
+        margin: 0 0 0 2vw;
+        .imgsomoss2 {
+            width: 100%;
+            height: 80vh;
+        }
+    }
+    .divtitbannercabanas {
+        align-self: self-end;
+        .titbannercabanas {
+            font-size: 4vw;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+    }
+    .divparrafobanner {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        .parrafobanner {
+            width: 40vw;
+            text-align: center;
+            font-size: 1.2vw;
+        }
+    }
+    .botonsomos {
+        border: 0.1em solid;
+        display: inline-block;
+        text-align: center;
+        font-size: 1vw;
+        width: auto;
+    }
 }

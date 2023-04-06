@@ -1,34 +1,79 @@
 /* ACTIVIDADES */
 
-.secdeportes {
-    display: flex;
-    height: auto;
-    justify-content:center;
-    flex-wrap: wrap;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    gap: 2vh;
-}
-
-.pdeportes {
-    background-color: white;
-    margin: 0;
-    text-align: center;
-    font-size: 2vw;
-}
-
 .titdeportes {
     text-align: center;
     font-size: 4vw;
     color: #47b4ed;
+    padding-top: 3.5vh;
 }
 
-.imgdeporte {
-    width: 40vw;
+.textdeportes {
+    font-size: 1.5vw;
+    color: $secondColor;
+    text-align: center;
 }
 
-h1 {
+.cascada {
+    display: flex;
+    .iframecascada {
+        .videocascada {
+            width: 100%;
+
+        }
+    }
+}
+
+.secdeportes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 60vh auto;
+    justify-content: center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-weight: 300;
+    gap: 2vw;
+    padding: 2vw;
+    div {
+        text-align: center;
+        .carousel {
+            width: 100%;
+            height: 100%;
+            .carousel-inner {
+                width: 100%;
+                height: 100%;
+                .carousel-item {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+            }
+        }
+        
+        }
+    }
+    .iframecascada {
+        grid-column: 1/3;
+    }
+    .carrusel {
+        grid-column: 3/5;
+    }
+    .imgdeporte {
+        width: 22vw;
+    }
+    .pdeportes {
+        background-color: white;
+        margin: 0;
+        text-align: center;
+        font-size: 2vw;
+    }
+    .pdeportes.t {
+        color: $mainColor;
+        font-weight: 800;
+    }
+    .pdeportes.precio {
+        font-size: 1.5vw;
+    }
 }
 

@@ -1,50 +1,42 @@
 @charset "UTF-8";
-/* BANNER */
+/* vars */ /* BANNER */
 .gridbanner {
   display: grid;
   grid-template-columns: 30vw 70vw;
   grid-template-rows: repeat(5, 1fr);
 }
-
-.imggridbanner {
+.gridbanner .imggridbanner {
   width: 35vw;
   grid-row: 1/6;
 }
-
-.text-gridbanner {
+.gridbanner .text-gridbanner-parent {
+  align-self: center;
+  justify-self: center;
+}
+.gridbanner .text-gridbanner-parent .text-gridbanner {
   color: #47b4ed;
   font-size: 8vw;
   font-family: "Montserrat", sans-serif;
 }
-
-.text-gridbanner-parent {
-  align-self: center;
-  justify-self: center;
-}
-
-.text-gridbanner.blue {
+.gridbanner .text-gridbanner-parent .text-gridbanner.blue {
   color: #04848d;
 }
-
-.parrafogridbanner-parent {
+.gridbanner .parrafogridbanner-parent {
   align-self: center;
   display: flex;
   justify-content: center;
 }
-
-.parrafogridbanner {
+.gridbanner .parrafogridbanner-parent .parrafogridbanner {
   font-size: 1.5vw;
   text-align: center;
   width: 80%;
   font-family: "Montserrat", sans-serif;
 }
-
-.buttonparent {
+.gridbanner .buttonparent {
   display: flex;
   justify-content: center;
 }
-
-.buttonreserva {
+.gridbanner .buttonparent .buttonreserva {
   font-size: 2vw;
   font-family: "Montserrat", sans-serif;
   background-color: #47b4ed;
@@ -54,11 +46,6 @@
 }
 
 /* INFORMACION DE CABANAS */
-.cabanas {
-  width: 30vw;
-  height: auto;
-}
-
 .secCabanas {
   background: linear-gradient(180deg, #47b4ed, rgb(250, 250, 250));
   display: grid;
@@ -67,8 +54,7 @@
   justify-items: center;
   align-items: center;
 }
-
-.titcab {
+.secCabanas .titcab {
   font-family: "Montserrat", sans-serif;
   font-style: italic;
   font-weight: 500;
@@ -76,35 +62,36 @@
   font-size: 2.5vw;
   padding: 2vh;
 }
-
-.precio {
+.secCabanas .precio {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   color: #47b4ed;
   font-size: 2vw;
   padding-top: 1vh;
 }
+.secCabanas .cabanas {
+  width: 30vw;
+  height: auto;
+}
 
 /* BANNER FOTOS */
-.divimgbannerfotos {
-  height: 100%;
-  width: 100%;
-}
-
-.imgbannerfotos {
-  width: 100%;
-  height: 100%;
-  border-radius: 15%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .bannerfotos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30vh 30vh;
   padding: 1vw;
   gap: 1vw;
+}
+.bannerfotos .divimgbannerfotos {
+  height: 100%;
+  width: 100%;
+}
+.bannerfotos .divimgbannerfotos .imgbannerfotos {
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /* LOCATION */
@@ -113,8 +100,7 @@
   grid-template-rows: auto auto auto;
   grid-template-columns: 40vw 60vw;
 }
-
-.hlocation {
+.location .hlocation {
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   color: #04848d;
@@ -123,28 +109,14 @@
   grid-column: 1/3;
   padding-top: 20px;
 }
-
-#dlocation {
+.location #dlocation {
   grid-row: 2/4;
   justify-self: center;
   width: 100%;
   height: 100%;
   padding: 1vw;
 }
-
-.dlocation {
-  font-size: 4vw;
-  font-weight: 800;
-  color: #47b4ed;
-}
-
-.dlocation.final {
-  font-size: 2.5vw;
-  font-weight: 800;
-  color: #47b4ed;
-}
-
-.divlocation {
+.location .divlocation {
   display: flex;
   justify-self: center;
   flex-direction: column;
@@ -155,63 +127,96 @@
   height: 100%;
   font-size: 1vw;
 }
-
-.horariosLocation {
+.location .divlocation .dlocation {
+  font-size: 4vw;
+  font-weight: 800;
+  color: #47b4ed;
+}
+.location .divlocation .horariosLocation {
   flex: 1;
 }
-
-.segundo {
+.location .divlocation .segundo {
   align-self: flex-start;
 }
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 3% 0 3% 0;
-  background-color: #47b4ed;
-  font-family: "Montserrat", sans-serif;
-}
-
-.correo {
-  font-family: "Montserrat", sans-serif;
-  font-size: 2vw;
-}
-
-.textfooter {
-  font-size: 1vw;
+.location .divlocation .segundo .dlocation.final {
+  font-size: 2.5vw;
+  font-weight: 800;
+  color: #47b4ed;
 }
 
 /* ACTIVIDADES */
-.secdeportes {
-  display: flex;
-  height: auto;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  gap: 2vh;
+.titdeportes {
+  text-align: center;
+  font-size: 4vw;
+  color: #47b4ed;
+  padding-top: 3.5vh;
 }
 
-.pdeportes {
+.textdeportes {
+  font-size: 1.5vw;
+  color: #04848d;
+  text-align: center;
+}
+
+.cascada {
+  display: flex;
+}
+.cascada .iframecascada .videocascada {
+  width: 100%;
+}
+
+.secdeportes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60vh auto;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  gap: 2vw;
+  padding: 2vw;
+}
+.secdeportes div {
+  text-align: center;
+}
+.secdeportes div .carousel {
+  width: 100%;
+  height: 100%;
+}
+.secdeportes div .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+.secdeportes div .carousel .carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+.secdeportes div .carousel .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.secdeportes .iframecascada {
+  grid-column: 1/3;
+}
+.secdeportes .carrusel {
+  grid-column: 3/5;
+}
+.secdeportes .imgdeporte {
+  width: 22vw;
+}
+.secdeportes .pdeportes {
   background-color: white;
   margin: 0;
   text-align: center;
   font-size: 2vw;
 }
-
-.titdeportes {
-  text-align: center;
-  font-size: 4vw;
+.secdeportes .pdeportes.t {
   color: #47b4ed;
-}
-
-.imgdeporte {
-  width: 40vw;
-}
-
-h1 {
-  font-family: "Montserrat", sans-serif;
   font-weight: 800;
+}
+.secdeportes .pdeportes.precio {
+  font-size: 1.5vw;
 }
 
 /* CABAÑAS */
@@ -221,29 +226,18 @@ h1 {
   color: #47b4ed;
 }
 
-.parrafocabanas {
-  font-size: 1.4vw;
-  width: 50vw;
-  padding: 2vw;
-}
-
-.imgsafari {
-  height: auto;
-}
-
-.imgsafarica {
-  width: 65vw;
-}
-
 .cabanasafari {
   display: flex;
   align-items: center;
   gap: 1vw;
 }
-
-.imagenbanner {
-  width: 50%;
-  height: 50%;
+.cabanasafari .imgsafarica {
+  width: 65vw;
+}
+.cabanasafari .parrafocabanas {
+  font-size: 1.4vw;
+  width: 50vw;
+  padding: 2vw;
 }
 
 /* CONTACTO */
@@ -257,52 +251,37 @@ h1 {
   display: flex;
   justify-content: center;
 }
-
-.flexform {
+.gridform .flexform {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.formc {
-  border: none;
-}
-
-.labelformcontact {
+.gridform .flexform .labelformcontact {
   display: block;
   font-size: 1.5vw;
 }
 
-.maps {
+.contactoEncuentranos .maps {
   height: 50vh;
   padding: 3vw;
 }
 
 /* QUIENES SOMOS */
-.bannersomos {
-  display: flex;
-  flex-direction: column;
-}
-
-.titsomos {
-  color: #47b4ed;
-  font-size: 500%;
-  position: relative;
-  font-size: 5vw;
-}
-
 .imgsomos {
   width: 100%;
   height: auto;
 }
 
-.storyfamily {
-  width: 70%;
-  text-align: center;
-  padding: 0 0 0 15%;
+.bannersomos {
+  display: flex;
+  flex-direction: column;
 }
-
-.psomos {
+.bannersomos .titsomos {
+  color: #47b4ed;
+  position: relative;
+  font-size: 5vw;
+}
+.bannersomos .psomos {
   width: 80vw;
   align-self: center;
   text-align: center;
@@ -318,48 +297,41 @@ h1 {
   justify-items: center;
   padding: 2vh 0 4vh 0;
 }
-
-.imgsomos2 {
+.nuestrassomos .imgsomos2 {
   align-self: flex-end;
   grid-row: 1/4;
   border: 2em solid;
   border-color: #47b4ed;
   margin: 0 0 0 2vw;
 }
-
-.imgsomoss2 {
+.nuestrassomos .imgsomos2 .imgsomoss2 {
   width: 100%;
   height: 80vh;
 }
-
-.botonsomos {
+.nuestrassomos .divtitbannercabanas {
+  align-self: self-end;
+}
+.nuestrassomos .divtitbannercabanas .titbannercabanas {
+  font-size: 4vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+.nuestrassomos .divparrafobanner {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.nuestrassomos .divparrafobanner .parrafobanner {
+  width: 40vw;
+  text-align: center;
+  font-size: 1.2vw;
+}
+.nuestrassomos .botonsomos {
   border: 0.1em solid;
   display: inline-block;
   text-align: center;
   font-size: 1vw;
   width: auto;
-}
-
-.titbannercabanas {
-  font-size: 4vw;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-}
-
-.divtitbannercabanas {
-  align-self: self-end;
-}
-
-.parrafobanner {
-  width: 40vw;
-  text-align: center;
-  font-size: 1.2vw;
-}
-
-.divparrafobanner {
-  height: auto;
-  display: flex;
-  flex-direction: column;
 }
 
 /* GENERAL */
@@ -368,6 +340,10 @@ body {
   overflow-x: hidden;
   margin: 0vw;
   font-family: "Montserrat", sans-serif;
+}
+body h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
 }
 
 /* NAVIGATOR */
@@ -379,134 +355,159 @@ body {
   align-content: center;
   flex-wrap: wrap;
 }
-
-.img-nav {
+.newnav .img-nav {
   background-color: white;
   width: 20vw;
 }
-
-.navbar-collapse {
+.newnav .navbar-collapse {
   font-size: 1.2vw;
   background-color: white;
   font-family: "Montserrat", sans-serif;
 }
-
-.navbar-nav {
+.newnav .navbar-nav {
   width: 70vw;
   justify-content: space-evenly;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2.5vh 0 2.5vh 0;
+  background-color: #47b4ed;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+.footer .correo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5vw;
+}
+.footer .correo i {
+  font-family: "Montserrat", sans-serif;
+}
+.footer .textfooter {
+  font-size: 1vw;
+}
+.footer .textfooterdos.primero {
+  margin-top: 2.5vh;
+}
+.footer .textfooterdos {
+  font-size: 0.7vw;
 }
 
 /* MEDIA QUERIES */
 /*TABLET */
 /* CELULAR */
-/* HOME */
 @media only screen and (max-width: 576px) {
-  /* INDEX */
-  .img-nav {
+  .newnav .img-nav {
     height: auto;
     padding: 0 0 0 0;
     width: 38vw;
   }
-  .navbar-collapse {
+  .newnav .navbar-collapse {
     font-size: 3vw;
   }
   .gridbanner {
     grid-template-rows: repeat(6, auto);
     grid-template-columns: 30vw 70vw;
   }
-  .imggridbanner {
+  .gridbanner .imggridbanner {
     grid-row: 1/6;
     grid-column: 1/2;
   }
-  .parrafogridbanner-parent {
-    grid-row: 6/7;
-    grid-column: 1/3;
-  }
-  .parrafogridbanner {
-    font-size: 3vw;
-    margin-top: 1rem;
-  }
-  .text-gridbanner-parent.main {
+  .gridbanner .text-gridbanner-parent .main {
     align-self: self-end;
     grid-row: 2/3;
   }
-  .text-gridbanner-parent.blue {
+  .gridbanner .text-gridbanner-parent .blue {
     grid-row: 3/4;
   }
-  .text-gridbanner-parent.blue.segundo {
+  .gridbanner .text-gridbanner-parent .blue .segundo {
     grid-row: 4/5;
   }
-  .buttonparent {
+  .gridbanner .parrafogridbanner-parent .parrafogridbanner {
+    font-size: 3vw;
+    margin-top: 1rem;
+  }
+  .gridbanner .buttonparent {
     grid-row: 7/8;
     grid-column: 1/3;
     margin-bottom: 1rem;
   }
-  .buttonreserva {
+  .gridbanner .buttonparent .buttonreserva {
     font-size: 4vw;
-  }
-  .banner {
-    height: 35vh;
   }
   .secCabanas {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
   }
+  .secCabanas .titancestral {
+    order: -3;
+  }
+  .secCabanas .titancestral .titcab {
+    font-size: 7vw;
+  }
+  .secCabanas .titsafari {
+    order: 1;
+  }
+  .secCabanas .titsafari .titcab {
+    font-size: 7vw;
+  }
+  .secCabanas .imgsafari {
+    order: 2;
+  }
+  .secCabanas .imgsafari .cabanas {
+    width: 60vw;
+  }
+  .secCabanas .imgancestral {
+    order: -2;
+  }
+  .secCabanas .imgancestral .cabanas {
+    width: 60vw;
+  }
+  .secCabanas .prancestral {
+    order: -1;
+  }
+  .secCabanas .prancestral .precio {
+    font-size: 5vw;
+  }
+  .secCabanas .prsafari {
+    order: 3;
+  }
+  .secCabanas .prsafari .precio {
+    font-size: 5vw;
+  }
   .bannerfotos {
     grid-template-rows: repeat(4, 30vh);
     grid-template-columns: repeat(2, 1fr);
-  }
-  .titancestral {
-    order: -3;
-  }
-  .titsafari {
-    order: 1;
-  }
-  .imgsafari {
-    order: 2;
-  }
-  .imgancestral {
-    order: -2;
-  }
-  .prancestral {
-    order: -1;
-  }
-  .prsafari {
-    order: 3;
-  }
-  .titcab {
-    font-size: 7vw;
-  }
-  .cabanas {
-    width: 60vw;
-  }
-  .precio {
-    font-size: 5vw;
   }
   .location {
     grid-template-columns: 100vw;
     grid-template-rows: auto auto auto auto;
   }
-  .dlocation {
-    font-size: 7vw;
-  }
-  .hlocation {
+  .location .hlocation {
     grid-column: unset;
     font-size: 9vw;
   }
-  #dlocation {
+  .location #dlocation {
     grid-row: unset;
     height: 40vh;
   }
-  .horariosLocation {
+  .location .divlocation .dlocation {
+    font-size: 7vw;
+  }
+  .location .divlocation .horariosLocation {
     font-size: 2.5vw;
   }
-  .correo {
-    font-size: 4vw;
+  .footer .correo {
+    font-size: 3vw;
   }
-  .textfooter {
+  .footer .textfooter {
+    font-size: 2vw;
+    padding: 0 2vw;
+  }
+  .footer .textfooterdos {
     font-size: 1.5vw;
   }
-  /* ACTIVIDADES */
   .secdeportes {
     flex-direction: column;
     align-content: center;
@@ -514,7 +515,33 @@ body {
     background-image: url(../imagenes/abstract-template.jpeg);
     padding: 4vh 0;
   }
-  .imgdeporte {
+  .secdeportes .imgdeporte {
     width: 70vw;
+  }
+  .titcabanapage {
+    padding-top: 2.5vh;
+  }
+  .cabanasafari {
+    padding-bottom: 2vh;
+    flex-direction: column;
+  }
+  .cabanasafari .parrafocabanas {
+    width: 80vw;
+    font-size: 2.5vw;
+  }
+  .bannersomos .titsomos {
+    font-size: 6vw;
+  }
+  .bannersomos .psomos {
+    font-size: 2.5vw;
+  }
+  .nuestrassomos .imgsomos2 .imgsomoss2 {
+    height: auto;
+  }
+  .nuestrassomos .divparrafobanner .parrafobanner {
+    font-size: 2vw;
+  }
+  .nuestrassomos .divparrafobanner .botonsomos {
+    font-size: 2vw;
   }
 }/*# sourceMappingURL=style.css.map */
