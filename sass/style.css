@@ -1,5 +1,8 @@
 @charset "UTF-8";
-/* vars */ /* BANNER */
+/* vars */
+/* BRAND COLORS */
+/* FONTS */
+/* BANNER */
 .gridbanner {
   display: grid;
   grid-template-columns: 30vw 70vw;
@@ -14,12 +17,13 @@
   justify-self: center;
 }
 .gridbanner .text-gridbanner-parent .text-gridbanner {
-  color: #47b4ed;
+  color: #00bbd6;
   font-size: 8vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
 }
 .gridbanner .text-gridbanner-parent .text-gridbanner.blue {
-  color: #04848d;
+  color: #228fa2;
 }
 .gridbanner .parrafogridbanner-parent {
   align-self: center;
@@ -27,10 +31,11 @@
   justify-content: center;
 }
 .gridbanner .parrafogridbanner-parent .parrafogridbanner {
-  font-size: 1.5vw;
   text-align: center;
   width: 80%;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 6rem;
 }
 .gridbanner .buttonparent {
   display: flex;
@@ -38,40 +43,62 @@
 }
 .gridbanner .buttonparent .buttonreserva {
   font-size: 2vw;
-  font-family: "Montserrat", sans-serif;
-  background-color: #47b4ed;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  background-color: #00bbd6;
   padding: 4%;
-  border: #04848d 0.3vw solid;
+  border: #228fa2 0.3vw solid;
   border-radius: 7%;
+  color: white;
 }
 
 /* INFORMACION DE CABANAS */
 .secCabanas {
-  background: linear-gradient(180deg, #47b4ed, rgb(250, 250, 250));
+  background: linear-gradient(180deg, #00bbd6, rgb(250, 250, 250));
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto auto;
   justify-items: center;
   align-items: center;
+  padding-bottom: 3vh;
 }
 .secCabanas .titcab {
-  font-family: "Montserrat", sans-serif;
-  font-style: italic;
-  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
   color: white;
   font-size: 2.5vw;
   padding: 2vh;
 }
 .secCabanas .precio {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  color: #47b4ed;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  color: white;
   font-size: 2vw;
   padding-top: 1vh;
 }
 .secCabanas .cabanas {
   width: 30vw;
   height: auto;
+}
+.secCabanas .incluye {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-column: 1/3;
+  font-size: 1.6vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+}
+.secCabanas .incluye .incluyetitulo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 2.5vw;
+  color: white;
+}
+.secCabanas .incluye .incluyecierre {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 
 /* BANNER FOTOS */
@@ -101,9 +128,9 @@
   grid-template-columns: 40vw 60vw;
 }
 .location .hlocation {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  color: #04848d;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: #f1bb1b;
   font-size: 7vw;
   text-align: center;
   grid-column: 1/3;
@@ -129,49 +156,47 @@
 }
 .location .divlocation .dlocation {
   font-size: 4vw;
-  font-weight: 800;
-  color: #47b4ed;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: #00bbd6;
 }
 .location .divlocation .horariosLocation {
   flex: 1;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
 }
 .location .divlocation .segundo {
   align-self: flex-start;
 }
 .location .divlocation .segundo .dlocation.final {
   font-size: 2.5vw;
-  font-weight: 800;
-  color: #47b4ed;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: #00bbd6;
 }
 
 /* ACTIVIDADES */
 .titdeportes {
   text-align: center;
-  font-size: 4vw;
-  color: #47b4ed;
+  font-size: 5vw;
+  color: #00bbd6;
   padding-top: 3.5vh;
 }
 
 .textdeportes {
   font-size: 1.5vw;
-  color: #04848d;
+  color: #f1bb1b;
   text-align: center;
-}
-
-.cascada {
-  display: flex;
-}
-.cascada .iframecascada .videocascada {
-  width: 100%;
 }
 
 .secdeportes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 60vh auto;
   justify-content: center;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   gap: 2vw;
   padding: 2vw;
 }
@@ -198,6 +223,14 @@
 }
 .secdeportes .iframecascada {
   grid-column: 1/3;
+  width: 100%;
+  height: 100%;
+}
+.secdeportes .iframecascada img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .secdeportes .carrusel {
   grid-column: 3/5;
@@ -212,8 +245,9 @@
   font-size: 2vw;
 }
 .secdeportes .pdeportes.t {
-  color: #47b4ed;
-  font-weight: 800;
+  color: #00bbd6;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
 }
 .secdeportes .pdeportes.precio {
   font-size: 1.5vw;
@@ -222,29 +256,145 @@
 /* CABAÑAS */
 .titcabanapage {
   text-align: center;
-  font-size: 4vw;
-  color: #47b4ed;
+  font-size: 7vw;
+  color: #00bbd6;
+  padding-top: 2vh;
 }
 
-.cabanasafari {
+.subtexto {
+  font-size: 1.6vw;
+  text-align: center;
+  padding-bottom: 2vh;
+}
+
+.bannersafaris {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5vh, repeat(2, 1fr);
+  justify-items: center;
+  background-color: #00bbd6;
+  padding: 0 0 2vh 0;
+  margin-bottom: 3vh;
+}
+.bannersafaris .titfotossafari {
+  grid-column: 1/5;
+  padding: 2vh 0 0 0;
+}
+.bannersafaris .titfotossafari h2 {
+  color: white;
+  font-size: 3vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+.bannersafaris .divfotoscabanas {
   display: flex;
+  flex-direction: column;
+  width: 20vw;
   align-items: center;
-  gap: 1vw;
 }
-.cabanasafari .imgsafarica {
-  width: 65vw;
+.bannersafaris .divfotoscabanas img {
+  width: 100%;
+  height: auto;
+  padding-top: 2vh;
 }
-.cabanasafari .parrafocabanas {
-  font-size: 1.4vw;
-  width: 50vw;
-  padding: 2vw;
+.bannersafaris .divfotoscabanas h5 {
+  font-size: 2.3vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  color: white;
+  padding-top: 1vh;
+}
+.bannersafaris .divfotoscabanas p {
+  font-size: 1.3vw;
+  text-align: center;
+  align-items: center;
+}
+
+.bannerancestral {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 30vh 30vh;
+  margin-bottom: 3vh;
+}
+.bannerancestral .titfotosancestral {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  justify-self: center;
+  padding-bottom: 2vh;
+}
+.bannerancestral .titfotosancestral h2 {
+  color: #00bbd6;
+  font-size: 3vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+.bannerancestral .imgancestralcabana {
+  grid-column: 1/2;
+  grid-row: 2/4;
+}
+.bannerancestral .imgancestralcabana img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.bannerancestral .titancestralcabana {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-weight: 800;
+  align-self: end;
+}
+.bannerancestral .titancestralcabana p {
+  text-align: center;
+  color: #f1bb1b;
+  font-size: 2.3vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.bannerancestral .textancestralcabana {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.bannerancestral .textancestralcabana p {
+  text-align: center;
+  font-size: 2vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+.bannerancestral .imgbannercabanas.uno {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.bannerancestral .imgbannercabanas.uno img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.bannerancestral .imgbannercabanas.dos {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.bannerancestral .imgbannercabanas.dos img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.bannerancestral .imgbannercabanas.tres {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.bannerancestral .imgbannercabanas.tres img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
 }
 
 /* CONTACTO */
 .tituloform {
   text-align: center;
   font-size: 4vw;
-  color: #47b4ed;
+  color: #00bbd6;
 }
 
 .gridform {
@@ -269,7 +419,9 @@
 /* QUIENES SOMOS */
 .imgsomos {
   width: 100%;
-  height: auto;
+  height: 80vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .bannersomos {
@@ -277,7 +429,7 @@
   flex-direction: column;
 }
 .bannersomos .titsomos {
-  color: #47b4ed;
+  color: #00bbd6;
   position: relative;
   font-size: 5vw;
 }
@@ -286,8 +438,8 @@
   align-self: center;
   text-align: center;
   font-size: 1.4vw;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 
 .nuestrassomos {
@@ -301,7 +453,7 @@
   align-self: flex-end;
   grid-row: 1/4;
   border: 2em solid;
-  border-color: #47b4ed;
+  border-color: #00bbd6;
   margin: 0 0 0 2vw;
 }
 .nuestrassomos .imgsomos2 .imgsomoss2 {
@@ -313,8 +465,9 @@
 }
 .nuestrassomos .divtitbannercabanas .titbannercabanas {
   font-size: 4vw;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  color: #f1bb1b;
 }
 .nuestrassomos .divparrafobanner {
   height: auto;
@@ -339,11 +492,11 @@ body {
   width: 100vw;
   overflow-x: hidden;
   margin: 0vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 body h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
 }
 
 /* NAVIGATOR */
@@ -362,7 +515,8 @@ body h1 {
 .newnav .navbar-collapse {
   font-size: 1.2vw;
   background-color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .newnav .navbar-nav {
   width: 70vw;
@@ -373,16 +527,19 @@ body h1 {
 .footer {
   text-align: center;
   padding: 2.5vh 0 2.5vh 0;
-  background-color: #47b4ed;
-  font-family: "Montserrat", sans-serif;
+  background-color: #00bbd6;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   color: white;
 }
 .footer .correo {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
   font-size: 1.5vw;
 }
 .footer .correo i {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
 }
 .footer .textfooter {
   font-size: 1vw;
@@ -476,6 +633,17 @@ body h1 {
   .secCabanas .prsafari .precio {
     font-size: 5vw;
   }
+  .secCabanas .incluye {
+    grid-column: unset;
+    order: 6;
+    font-size: 1rem;
+    padding: 0 5%;
+    text-align: center;
+  }
+  .secCabanas .incluye .incluyetitulo {
+    font-size: 3rem;
+    color: #f1bb1b;
+  }
   .bannerfotos {
     grid-template-rows: repeat(4, 30vh);
     grid-template-columns: repeat(2, 1fr);
@@ -508,15 +676,35 @@ body h1 {
   .footer .textfooterdos {
     font-size: 1.5vw;
   }
+  .titdeportes {
+    font-size: 3rem;
+  }
+  .textdeportes {
+    font-size: 1.3rem;
+  }
   .secdeportes {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
     align-content: center;
     text-align: center;
-    background-image: url(../imagenes/abstract-template.jpeg);
     padding: 4vh 0;
   }
   .secdeportes .imgdeporte {
     width: 70vw;
+  }
+  .secdeportes .iframecascada {
+    grid-column: unset;
+    display: none;
+  }
+  .secdeportes .carrusel {
+    grid-column: unset;
+    display: none;
+  }
+  .secdeportes div .pdeportes {
+    font-size: 3rem;
+  }
+  .secdeportes div .pdeportes.precio {
+    font-size: 1.5rem;
   }
   .titcabanapage {
     padding-top: 2.5vh;

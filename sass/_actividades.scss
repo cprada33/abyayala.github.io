@@ -2,34 +2,23 @@
 
 .titdeportes {
     text-align: center;
-    font-size: 4vw;
-    color: #47b4ed;
+    font-size: 5vw;
+    color: $main;
     padding-top: 3.5vh;
 }
 
 .textdeportes {
     font-size: 1.5vw;
-    color: $secondColor;
+    color: $third;
     text-align: center;
-}
-
-.cascada {
-    display: flex;
-    .iframecascada {
-        .videocascada {
-            width: 100%;
-
-        }
-    }
 }
 
 .secdeportes {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 60vh auto;
     justify-content: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    @include regular;
     gap: 2vw;
     padding: 2vw;
     div {
@@ -55,6 +44,13 @@
     }
     .iframecascada {
         grid-column: 1/3;
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     .carrusel {
         grid-column: 3/5;
@@ -63,14 +59,14 @@
         width: 22vw;
     }
     .pdeportes {
-        background-color: white;
+        background-color: $white;
         margin: 0;
         text-align: center;
         font-size: 2vw;
     }
     .pdeportes.t {
-        color: $mainColor;
-        font-weight: 800;
+        color: $main;
+        @include black;
     }
     .pdeportes.precio {
         font-size: 1.5vw;

@@ -12,12 +12,12 @@
         align-self: center;
         justify-self: center;
         .text-gridbanner {
-            color:#47b4ed;
+            color: $main;
             font-size: 8vw;
-            font-family: 'Montserrat', sans-serif;
+            @include black;
         }
         .text-gridbanner.blue {
-            color: #04848d;
+            color: $second;
         }
     }
     .parrafogridbanner-parent {
@@ -25,10 +25,10 @@
         display: flex;
         justify-content: center;
         .parrafogridbanner {
-            font-size: 1.5vw;
             text-align: center;
             width: 80%;
-            font-family: 'Montserrat', sans-serif;
+            @include regular;
+            font-size: 6rem;
         }
     }
     .buttonparent {
@@ -36,11 +36,12 @@
         justify-content: center;
         .buttonreserva {
             font-size: 2vw;
-            font-family: 'Montserrat', sans-serif;
-            background-color:#47b4ed;
+            @include semibold;
+            background-color:$main;
             padding: 4%;
-            border: #04848d 0.3vw solid;
+            border: $second 0.3vw solid;
             border-radius: 7%;
+            color: $white;
         }
     }
 }
@@ -49,30 +50,44 @@
 /* INFORMACION DE CABANAS */
 
 .secCabanas {
-    background: linear-gradient(180deg, #47b4ed, rgb(250,250,250));
+    background: linear-gradient(180deg, $main, rgb(250,250,250));
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     justify-items: center;
     align-items: center;
+    padding-bottom: 3vh;
     .titcab {
-        font-family: 'Montserrat', sans-serif;
-        font-style: italic;
-        font-weight: 500;
-        color: white;
+        @include semibold;
+        color: $white;
         font-size: 2.5vw;
         padding: 2vh;
     }
     .precio {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
-        color: #47b4ed;
+        @include semibold;
+        color: $white;
         font-size: 2vw;
         padding-top: 1vh;
     }
     .cabanas {
         width: 30vw;
         height: auto;
+    }
+    .incluye {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 1/3;
+        font-size: 1.6vw;
+        @include parrafo;
+        .incluyetitulo {
+            @include bold;
+            font-size: 2.5vw;
+            color: $white;
+        }
+        .incluyecierre {
+            @include bold;
+        }
     }
 }
 
@@ -103,9 +118,8 @@
     grid-template-rows: auto auto auto;
     grid-template-columns: 40vw 60vw;
     .hlocation {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
-        color: #04848d;
+        @include black;
+        color: $third;
         font-size: 7vw;
         text-align: center;
         grid-column: 1/3;
@@ -130,19 +144,20 @@
         font-size: 1vw;
         .dlocation {
             font-size: 4vw;
-            font-weight: 800;
-            color: #47b4ed;
+            @include black;
+            color: $main;
         }
         .horariosLocation {
             flex: 1;
+            @include parrafo;
         }
     }
     .divlocation .segundo {
         align-self: flex-start;
         .dlocation.final {
             font-size: 2.5vw;
-            font-weight: 800;
-            color: #47b4ed;
+            @include black;
+            color: $main;
         }
     }
 }

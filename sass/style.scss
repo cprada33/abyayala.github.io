@@ -1,7 +1,42 @@
 /* vars */
 
-$mainColor: #47b4ed;
-$secondColor: #04848d;
+/* BRAND COLORS */
+$main: #00bbd6;
+$second: #228fa2;
+$third: #f1bb1b;
+$fourth: #f59a7f;
+$fifth: #8c4022;
+$sixth: #5fb246;
+$seventh: #4cbfa8;
+$white: white;
+
+/* FONTS */
+
+@mixin bold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+@mixin black {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+}
+
+@mixin regular {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+@mixin semibold {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+@mixin parrafo {
+    @include regular;
+    font-size: 5rem;
+}
+
 
 @import "index";
 @import "actividades";
@@ -15,10 +50,9 @@ body {
     width: 100vw;
     overflow-x: hidden;
     margin: 0vw;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
     h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 800;
+        @include black;
     }
 }
 
@@ -38,7 +72,7 @@ body {
     .navbar-collapse {
         font-size: 1.2vw;
         background-color: white;
-        font-family: 'Montserrat', sans-serif;
+        @include regular;
     }
     .navbar-nav {
         width: 70vw;
@@ -51,14 +85,14 @@ body {
 .footer {
     text-align: center;
     padding: 2.5vh 0 2.5vh 0;
-    background-color:#47b4ed;
-    font-family: 'Montserrat', sans-serif;
+    background-color: $main;
+    @include regular;
     color: white;
     .correo {
-        font-family: 'Montserrat', sans-serif;
+        @include regular;
         font-size: 1.5vw;
         i {
-            font-family: 'Montserrat', sans-serif;
+            @include regular;
         }
     }
     .textfooter {
@@ -173,6 +207,17 @@ body {
                 font-size: 5vw;
             }
         }
+        .incluye {
+            grid-column: unset;
+            order: 6;
+            font-size: 1rem;
+            padding: 0 5%;
+            text-align: center;
+            .incluyetitulo {
+                font-size: 3rem;
+                color: $third;
+            }
+        }
     }
 
 // INDEX: BANNER FOTOS
@@ -224,14 +269,38 @@ body {
 
     // SEC ACTIVIDADES 
 
+    .titdeportes {
+        font-size: 3rem;
+    }
+
+    .textdeportes {
+        font-size: 1.3rem;
+    }
+
     .secdeportes {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
         align-content: center;
         text-align: center;
-        background-image: url(../imagenes/abstract-template.jpeg);
         padding: 4vh 0;
         .imgdeporte {
             width: 70vw;
+        }
+        .iframecascada {
+            grid-column: unset;
+            display: none;
+        }
+        .carrusel {
+            grid-column: unset;
+            display: none;
+        }
+        div {
+            .pdeportes {
+                font-size: 3rem;
+            }
+            .pdeportes.precio {
+                font-size: 1.5rem;
+            }
         }
     }
 

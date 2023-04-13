@@ -2,14 +2,15 @@
 
 .imgsomos {
     width: 100%;
-    height: auto;
+    height: 80vh;
+    object-fit: cover;
 }
 
 .bannersomos {
     display: flex;
     flex-direction: column;
     .titsomos {
-        color:#47b4ed;
+        color: $main;
         position: relative;
         font-size: 5vw;
     }
@@ -18,8 +19,7 @@
         align-self: center;
         text-align: center;
         font-size: 1.4vw;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 300;
+        @include regular;
     }
 }
 
@@ -33,7 +33,7 @@
         align-self: flex-end;
         grid-row: 1/4;
         border: 2em solid;
-        border-color: #47b4ed;
+        border-color: $main;
         margin: 0 0 0 2vw;
         .imgsomoss2 {
             width: 100%;
@@ -44,8 +44,8 @@
         align-self: self-end;
         .titbannercabanas {
             font-size: 4vw;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
+            @include black;
+            color: $third;
         }
     }
     .divparrafobanner {
