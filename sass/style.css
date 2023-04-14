@@ -48,7 +48,6 @@
   background-color: #00bbd6;
   padding: 4%;
   border: #228fa2 0.3vw solid;
-  border-radius: 7%;
   color: white;
 }
 
@@ -488,6 +487,10 @@
 }
 
 /* GENERAL */
+html {
+  font-size: 16px;
+}
+
 body {
   width: 100vw;
   overflow-x: hidden;
