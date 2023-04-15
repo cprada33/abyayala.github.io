@@ -9,6 +9,7 @@ $fifth: #8c4022;
 $sixth: #5fb246;
 $seventh: #4cbfa8;
 $white: white;
+$black: black;
 
 /* FONTS */
 
@@ -34,7 +35,7 @@ $white: white;
 
 @mixin parrafo {
     @include regular;
-    font-size: 5rem;
+    font-size: 1.3rem;
 }
 
 
@@ -46,10 +47,6 @@ $white: white;
 
 
 /* GENERAL */
-
-html {
-    font-size: 4px;
-}
 
 body {
     width: 100vw;

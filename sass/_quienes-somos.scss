@@ -65,4 +65,9 @@
         font-size: 1vw;
         width: auto;
     }
+    a {
+        text-decoration: none;
+        color: $black;
+        @include bold;
+    }
 }

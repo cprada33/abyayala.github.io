@@ -8,22 +8,26 @@
 
 .gridform {
     display: flex;
-    justify-content: center;
-    .flexform {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        .labelformcontact {
-            display: block;
-            font-size: 1.5vw;
-        }
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    @include parrafo;
+    a {
+        text-decoration: none;
+        color: $black;
     }
 }
 
 .contactoEncuentranos {
     .maps {
         height: 50vh;
-        padding: 3vw;
+        padding: 2vh 2vw;
+    }
+    h2 {
+        @include bold;
+        color: $third;
+        text-align: center;
+        padding-top: 2vh;
     }
 }
 
