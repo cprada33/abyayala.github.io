@@ -1,68 +1,67 @@
 /* QUIENES SOMOS */
 
-.imgsomos {
+.img-somos {
     width: 100%;
     height: 80vh;
     object-fit: cover;
 }
 
-.bannersomos {
+.banner-somos {
     display: flex;
     flex-direction: column;
-    .titsomos {
+    .tit-somos {
         color: $main;
         position: relative;
-        font-size: 5vw;
+        @include h1;
     }
     .psomos {
         width: 80vw;
         align-self: center;
         text-align: center;
-        font-size: 1.4vw;
-        @include regular;
+        @include parrafo;
     }
 }
 
-.nuestrassomos {
+.nuestras-somos {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-items: center;
     padding: 2vh 0 4vh 0;
-    .imgsomos2 {
+    .img-somos2 {
         align-self: flex-end;
         grid-row: 1/4;
         border: 2em solid;
         border-color: $main;
         margin: 0 0 0 2vw;
-        .imgsomoss2 {
+        .img-somoss2 {
             width: 100%;
             height: 80vh;
         }
     }
-    .divtitbannercabanas {
+    .div-tit-banner-cabanas {
         align-self: self-end;
-        .titbannercabanas {
+        .tit-banner-cabanas {
             font-size: 4vw;
-            @include black;
+            @include h2;
             color: $third;
         }
     }
-    .divparrafobanner {
+    .div-parrafo-banner {
         height: auto;
         display: flex;
         flex-direction: column;
-        .parrafobanner {
+        .parrafo-banner {
             width: 40vw;
             text-align: center;
-            font-size: 1.2vw;
+            @include mini-parrafo;
         }
     }
-    .botonsomos {
+    .boton-somos {
         border: 0.1em solid;
         display: inline-block;
         text-align: center;
-        font-size: 1vw;
+        font-size: 1rem;
         width: auto;
     }
     a {

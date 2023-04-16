@@ -2,47 +2,49 @@
 /* vars */
 /* BRAND COLORS */
 /* FONTS */
+/* FONTS DESKOPT */
+/* FONTS MEDIA QUERIS */
 /* BANNER */
-.gridbanner {
+.grid-banner {
   display: grid;
-  grid-template-columns: 30vw 70vw;
+  grid-template-columns: 30% 70%;
   grid-template-rows: repeat(5, 1fr);
 }
-.gridbanner .imggridbanner {
-  width: 35vw;
+.grid-banner .img-grid-banner {
+  width: 117%;
   grid-row: 1/6;
 }
-.gridbanner .text-gridbanner-parent {
+.grid-banner .text-gridbanner-parent {
   align-self: center;
   justify-self: center;
 }
-.gridbanner .text-gridbanner-parent .text-gridbanner {
+.grid-banner .text-gridbanner-parent .text-gridbanner {
   color: #00bbd6;
-  font-size: 8vw;
+  font-size: 7rem;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
 }
-.gridbanner .text-gridbanner-parent .text-gridbanner.blue {
+.grid-banner .text-gridbanner-parent .text-gridbanner.blue {
   color: #228fa2;
 }
-.gridbanner .parrafogridbanner-parent {
+.grid-banner .parrafogridbanner-parent {
   align-self: center;
   display: flex;
   justify-content: center;
 }
-.gridbanner .parrafogridbanner-parent .parrafogridbanner {
+.grid-banner .parrafogridbanner-parent .parrafogridbanner {
   text-align: center;
   width: 80%;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 1.5rem;
 }
-.gridbanner .buttonparent {
+.grid-banner .button-parent {
   display: flex;
   justify-content: center;
 }
-.gridbanner .buttonparent .buttonreserva {
-  font-size: 2vw;
+.grid-banner .button-parent .button-reserva {
+  font-size: 1.6rem;
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   background-color: #00bbd6;
@@ -61,21 +63,25 @@
   align-items: center;
   padding-bottom: 3vh;
 }
-.secCabanas .titcab {
+.secCabanas .tit-cab {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   color: white;
-  font-size: 2.5vw;
+  font-size: 2.5rem;
   padding: 2vh;
 }
 .secCabanas .precio {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   color: white;
-  font-size: 2vw;
+  font-size: 2rem;
   padding-top: 1vh;
 }
-.secCabanas .cabanas {
+.secCabanas .img-safari .cabanas {
+  width: 30vw;
+  height: auto;
+}
+.secCabanas .img-ancestral .cabanas {
   width: 30vw;
   height: auto;
 }
@@ -88,30 +94,30 @@
   font-weight: 400;
   font-size: 1.3rem;
 }
-.secCabanas .incluye .incluyetitulo {
+.secCabanas .incluye .incluye-titulo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 2.5vw;
+  font-size: 2.5rem;
   color: white;
 }
-.secCabanas .incluye .incluyecierre {
+.secCabanas .incluye .incluye-cierre {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
 
 /* BANNER FOTOS */
-.bannerfotos {
+.banner-fotos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30vh 30vh;
   padding: 1vw;
   gap: 1vw;
 }
-.bannerfotos .divimgbannerfotos {
+.banner-fotos .div-img-banner-fotos {
   height: 100%;
   width: 100%;
 }
-.bannerfotos .divimgbannerfotos .imgbannerfotos {
+.banner-fotos .div-img-banner-fotos .img-banner-fotos {
   width: 100%;
   height: 100%;
   border-radius: 15%;
@@ -129,7 +135,7 @@
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   color: #f1bb1b;
-  font-size: 7vw;
+  font-size: 7rem;
   text-align: center;
   grid-column: 1/3;
   padding-top: 20px;
@@ -141,7 +147,7 @@
   height: 100%;
   padding: 1vw;
 }
-.location .divlocation {
+.location .div-location {
   display: flex;
   justify-self: center;
   flex-direction: column;
@@ -150,45 +156,45 @@
   align-self: center;
   width: 100%;
   height: 100%;
-  font-size: 1vw;
+  font-size: 1rem;
 }
-.location .divlocation .dlocation {
-  font-size: 4vw;
+.location .div-location .dlocation {
+  font-size: 4rem;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   color: #00bbd6;
 }
-.location .divlocation .horariosLocation {
+.location .div-location .horariosLocation {
   flex: 1;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 1.3rem;
 }
-.location .divlocation .segundo {
+.location .div-location .segundo {
   align-self: flex-start;
 }
-.location .divlocation .segundo .dlocation.final {
-  font-size: 2.5vw;
+.location .div-location .segundo .dlocation.final {
+  font-size: 2.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   color: #00bbd6;
 }
 
 /* ACTIVIDADES */
-.titdeportes {
+.tit-deportes {
   text-align: center;
-  font-size: 5vw;
+  font-size: 5rem;
   color: #00bbd6;
   padding-top: 3.5vh;
 }
 
-.textdeportes {
-  font-size: 1.5vw;
+.text-deportes {
+  font-size: 1.5rem;
   color: #f1bb1b;
   text-align: center;
 }
 
-.secdeportes {
+.sec-deportes {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 60vh auto;
@@ -198,74 +204,78 @@
   gap: 2vw;
   padding: 2vw;
 }
-.secdeportes div {
+.sec-deportes div {
   text-align: center;
 }
-.secdeportes div .carousel {
+.sec-deportes div .carousel {
   width: 100%;
   height: 100%;
 }
-.secdeportes div .carousel .carousel-inner {
+.sec-deportes div .carousel .carousel-inner {
   width: 100%;
   height: 100%;
 }
-.secdeportes div .carousel .carousel-inner .carousel-item {
+.sec-deportes div .carousel .carousel-inner .carousel-item {
   width: 100%;
   height: 100%;
 }
-.secdeportes div .carousel .carousel-inner .carousel-item img {
+.sec-deportes div .carousel .carousel-inner .carousel-item img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.secdeportes .iframecascada {
+.sec-deportes .iframe-cascada {
   grid-column: 1/3;
   width: 100%;
   height: 100%;
 }
-.secdeportes .iframecascada img {
+.sec-deportes .iframe-cascada img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.secdeportes .carrusel {
+.sec-deportes .carrusel {
   grid-column: 3/5;
 }
-.secdeportes .imgdeporte {
+.sec-deportes .img-deporte {
   width: 22vw;
 }
-.secdeportes .pdeportes {
+.sec-deportes .pdeportes {
   background-color: white;
   margin: 0;
   text-align: center;
-  font-size: 2vw;
+  font-size: 2rem;
 }
-.secdeportes .pdeportes.t {
+.sec-deportes .pdeportes.t {
   color: #00bbd6;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
 }
-.secdeportes .pdeportes.precio {
-  font-size: 1.5vw;
+.sec-deportes .pdeportes.precio {
+  font-size: 1.5rem;
 }
 
 /* CABAÑAS */
-.titcabanapage {
+.tit-cabana-page {
   text-align: center;
-  font-size: 7vw;
   color: #00bbd6;
   padding-top: 2vh;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 6.3rem;
 }
 
 .subtexto {
-  font-size: 1.6vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
   text-align: center;
   padding-bottom: 2vh;
 }
 
-.bannersafaris {
+.banner-safaris {
   display: grid;
   width: 100vw;
   grid-template-columns: repeat(4, 1fr);
@@ -275,127 +285,111 @@
   padding: 0 0 2vh 0;
   margin-bottom: 3vh;
 }
-.bannersafaris .titfotossafari {
+.banner-safaris .tit-fotos-safari {
   grid-column: 1/5;
   padding: 2vh 0 0 0;
 }
-.bannersafaris .titfotossafari h2 {
+.banner-safaris .tit-fotos-safari h2 {
   color: white;
-  font-size: 3vw;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  font-size: 2.5rem;
 }
-.bannersafaris .divfotoscabanas {
+.banner-safaris .div-fotos-cabanas {
   display: flex;
   flex-direction: column;
   width: 20vw;
   align-items: center;
 }
-.bannersafaris .divfotoscabanas img {
+.banner-safaris .div-fotos-cabanas img {
   width: 100%;
   height: auto;
   padding-top: 2vh;
 }
-.bannersafaris .divfotoscabanas h5 {
-  font-size: 2.3vw;
+.banner-safaris .div-fotos-cabanas h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  font-size: 2rem;
   color: white;
   padding-top: 1vh;
 }
-.bannersafaris .divfotoscabanas p {
-  font-size: 1.3vw;
+.banner-safaris .div-fotos-cabanas p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
   text-align: center;
   align-items: center;
 }
 
-.bannerancestral {
+.banner-safaris-mobile {
+  display: none;
+}
+
+.banner-ancestral {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 30vh 30vh;
   margin-bottom: 3vh;
 }
-.bannerancestral .titfotosancestral {
+.banner-ancestral .foto-ancestral-mobile {
+  display: none;
+}
+.banner-ancestral .tit-fotos-ancestral {
   grid-column: 1/5;
   grid-row: 1/2;
   justify-self: center;
   padding-bottom: 2vh;
 }
-.bannerancestral .titfotosancestral h2 {
+.banner-ancestral .tit-fotos-ancestral h2 {
   color: #00bbd6;
-  font-size: 3vw;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  font-size: 2.5rem;
 }
-.bannerancestral .imgancestralcabana {
+.banner-ancestral .img-ancestral-cabana {
   grid-column: 1/2;
   grid-row: 2/4;
 }
-.bannerancestral .imgancestralcabana img {
+.banner-ancestral .img-ancestral-cabana img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.bannerancestral .titancestralcabana {
+.banner-ancestral .tit-ancestral-cabana {
   grid-column: 2/3;
   grid-row: 2/3;
   font-weight: 800;
   align-self: end;
 }
-.bannerancestral .titancestralcabana p {
+.banner-ancestral .tit-ancestral-cabana p {
   text-align: center;
   color: #f1bb1b;
-  font-size: 2.3vw;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  font-size: 2rem;
 }
-.bannerancestral .textancestralcabana {
+.banner-ancestral .text-ancestral-cabana {
   grid-column: 2/3;
   grid-row: 3/4;
 }
-.bannerancestral .textancestralcabana p {
+.banner-ancestral .text-ancestral-cabana p {
   text-align: center;
-  font-size: 2vw;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-}
-.bannerancestral .imgbannercabanas.uno {
-  grid-column: 1/2;
-  grid-row: 3/4;
-}
-.bannerancestral .imgbannercabanas.uno img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-.bannerancestral .imgbannercabanas.dos {
-  grid-column: 2/3;
-  grid-row: 3/4;
-}
-.bannerancestral .imgbannercabanas.dos img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-}
-.bannerancestral .imgbannercabanas.tres {
-  grid-column: 3/4;
-  grid-row: 3/4;
-}
-.bannerancestral .imgbannercabanas.tres img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
+  font-size: 1.3rem;
 }
 
 /* CONTACTO */
-.tituloform {
+.titulo-form {
   text-align: center;
-  font-size: 4vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 6.3rem;
   color: #00bbd6;
 }
 
-.gridform {
+.grid-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -404,7 +398,7 @@
   font-weight: 400;
   font-size: 1.3rem;
 }
-.gridform a {
+.grid-form a {
   text-decoration: none;
   color: black;
 }
@@ -422,76 +416,81 @@
 }
 
 /* QUIENES SOMOS */
-.imgsomos {
+.img-somos {
   width: 100%;
   height: 80vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.bannersomos {
+.banner-somos {
   display: flex;
   flex-direction: column;
 }
-.bannersomos .titsomos {
+.banner-somos .tit-somos {
   color: #00bbd6;
   position: relative;
-  font-size: 5vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 6.3rem;
 }
-.bannersomos .psomos {
+.banner-somos .psomos {
   width: 80vw;
   align-self: center;
   text-align: center;
-  font-size: 1.4vw;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
+  font-size: 1.3rem;
 }
 
-.nuestrassomos {
+.nuestras-somos {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
   padding: 2vh 0 4vh 0;
 }
-.nuestrassomos .imgsomos2 {
+.nuestras-somos .img-somos2 {
   align-self: flex-end;
   grid-row: 1/4;
   border: 2em solid;
   border-color: #00bbd6;
   margin: 0 0 0 2vw;
 }
-.nuestrassomos .imgsomos2 .imgsomoss2 {
+.nuestras-somos .img-somos2 .img-somoss2 {
   width: 100%;
   height: 80vh;
 }
-.nuestrassomos .divtitbannercabanas {
+.nuestras-somos .div-tit-banner-cabanas {
   align-self: self-end;
 }
-.nuestrassomos .divtitbannercabanas .titbannercabanas {
+.nuestras-somos .div-tit-banner-cabanas .tit-banner-cabanas {
   font-size: 4vw;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
+  font-size: 2.5rem;
   color: #f1bb1b;
 }
-.nuestrassomos .divparrafobanner {
+.nuestras-somos .div-parrafo-banner {
   height: auto;
   display: flex;
   flex-direction: column;
 }
-.nuestrassomos .divparrafobanner .parrafobanner {
+.nuestras-somos .div-parrafo-banner .parrafo-banner {
   width: 40vw;
   text-align: center;
-  font-size: 1.2vw;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
-.nuestrassomos .botonsomos {
+.nuestras-somos .boton-somos {
   border: 0.1em solid;
   display: inline-block;
   text-align: center;
-  font-size: 1vw;
+  font-size: 1rem;
   width: auto;
 }
-.nuestrassomos a {
+.nuestras-somos a {
   text-decoration: none;
   color: black;
   font-family: "Raleway", sans-serif;
@@ -515,7 +514,6 @@ body h1 {
   display: flex;
   background-color: white;
   justify-content: space-around;
-  padding: 0% 0 0% 0;
   align-content: center;
   flex-wrap: wrap;
 }
@@ -524,7 +522,7 @@ body h1 {
   width: 20vw;
 }
 .newnav .navbar-collapse {
-  font-size: 1.2vw;
+  font-size: 1.1rem;
   background-color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -546,20 +544,20 @@ body h1 {
 .footer .correo {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  font-size: 1.5vw;
+  font-size: 1.4rem;
 }
 .footer .correo i {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
-.footer .textfooter {
-  font-size: 1vw;
+.footer .text-footer {
+  font-size: 0.9rem;
 }
-.footer .textfooterdos.primero {
+.footer .text-footer-dos.primero {
   margin-top: 2.5vh;
 }
-.footer .textfooterdos {
-  font-size: 0.7vw;
+.footer .text-footer-dos {
+  font-size: 0.7rem;
 }
 
 /* MEDIA QUERIES */
@@ -572,90 +570,107 @@ body h1 {
     width: 38vw;
   }
   .newnav .navbar-collapse {
-    font-size: 3vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
   }
-  .gridbanner {
+  .grid-banner {
     grid-template-rows: repeat(6, auto);
     grid-template-columns: 30vw 70vw;
   }
-  .gridbanner .imggridbanner {
+  .grid-banner .img-grid-banner {
     grid-row: 1/6;
     grid-column: 1/2;
   }
-  .gridbanner .text-gridbanner-parent .main {
+  .grid-banner .text-gridbanner-parent .text-gridbanner {
+    font-size: 2.9rem;
+  }
+  .grid-banner .text-gridbanner-parent .main {
     align-self: self-end;
     grid-row: 2/3;
   }
-  .gridbanner .text-gridbanner-parent .blue {
+  .grid-banner .text-gridbanner-parent .blue {
     grid-row: 3/4;
   }
-  .gridbanner .text-gridbanner-parent .blue .segundo {
+  .grid-banner .text-gridbanner-parent .blue .segundo {
     grid-row: 4/5;
   }
-  .gridbanner .parrafogridbanner-parent .parrafogridbanner {
-    font-size: 3vw;
+  .grid-banner .parrafogridbanner-parent .parrafogridbanner {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
     margin-top: 1rem;
   }
-  .gridbanner .buttonparent {
+  .grid-banner .button-parent {
     grid-row: 7/8;
     grid-column: 1/3;
     margin-bottom: 1rem;
   }
-  .gridbanner .buttonparent .buttonreserva {
-    font-size: 4vw;
+  .grid-banner .button-parent .button-reserva {
+    font-size: 1.5rem;
   }
   .secCabanas {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
   }
-  .secCabanas .titancestral {
+  .secCabanas .tit-ancestral {
     order: -3;
   }
-  .secCabanas .titancestral .titcab {
-    font-size: 7vw;
+  .secCabanas .tit-ancestral .tit-cab {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
   }
-  .secCabanas .titsafari {
+  .secCabanas .tit-safari {
     order: 1;
   }
-  .secCabanas .titsafari .titcab {
-    font-size: 7vw;
+  .secCabanas .tit-safari .tit-cab {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
   }
-  .secCabanas .imgsafari {
+  .secCabanas .img-safari {
     order: 2;
   }
-  .secCabanas .imgsafari .cabanas {
+  .secCabanas .img-safari .cabanas {
     width: 60vw;
   }
-  .secCabanas .imgancestral {
+  .secCabanas .img-ancestral {
     order: -2;
   }
-  .secCabanas .imgancestral .cabanas {
+  .secCabanas .img-ancestral .cabanas {
     width: 60vw;
   }
-  .secCabanas .prancestral {
+  .secCabanas .pr-ancestral {
     order: -1;
   }
-  .secCabanas .prancestral .precio {
-    font-size: 5vw;
+  .secCabanas .pr-ancestral .precio {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
   }
-  .secCabanas .prsafari {
+  .secCabanas .pr-safari {
     order: 3;
   }
-  .secCabanas .prsafari .precio {
-    font-size: 5vw;
+  .secCabanas .pr-safari .precio {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
   }
   .secCabanas .incluye {
     grid-column: unset;
     order: 6;
-    font-size: 1rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
     padding: 0 5%;
     text-align: center;
   }
-  .secCabanas .incluye .incluyetitulo {
+  .secCabanas .incluye .incluye-titulo {
     font-size: 3rem;
     color: #f1bb1b;
   }
-  .bannerfotos {
+  .banner-fotos {
     grid-template-rows: repeat(4, 30vh);
     grid-template-columns: repeat(2, 1fr);
   }
@@ -665,82 +680,179 @@ body h1 {
   }
   .location .hlocation {
     grid-column: unset;
-    font-size: 9vw;
+    font-size: 3.3rem;
   }
   .location #dlocation {
     grid-row: unset;
     height: 40vh;
   }
-  .location .divlocation .dlocation {
-    font-size: 7vw;
+  .location .div-location .dlocation {
+    font-size: 2.5rem;
   }
-  .location .divlocation .horariosLocation {
-    font-size: 2.5vw;
+  .location .div-location .horariosLocation {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
   }
   .footer .correo {
-    font-size: 3vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
   }
-  .footer .textfooter {
-    font-size: 2vw;
+  .footer .text-footer {
+    font-size: 0.7rem;
     padding: 0 2vw;
   }
-  .footer .textfooterdos {
-    font-size: 1.5vw;
+  .footer .text-footer-dos {
+    font-size: 0.5rem;
   }
-  .titdeportes {
+  .tit-deportes {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
     font-size: 3rem;
   }
-  .textdeportes {
+  .text-deportes {
     font-size: 1.3rem;
+    margin-bottom: -1px;
   }
-  .secdeportes {
+  .sec-deportes {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, auto);
+    grid-template-rows: repeat(3, auto);
     align-content: center;
     text-align: center;
-    padding: 4vh 0;
+    padding-top: 25px;
   }
-  .secdeportes .imgdeporte {
+  .sec-deportes .img-deporte {
     width: 70vw;
   }
-  .secdeportes .iframecascada {
+  .sec-deportes .iframe-cascada {
     grid-column: unset;
     display: none;
   }
-  .secdeportes .carrusel {
+  .sec-deportes .carrusel {
     grid-column: unset;
     display: none;
   }
-  .secdeportes div .pdeportes {
+  .sec-deportes div .pdeportes {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  .sec-deportes div .pdeportes.precio {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+  }
+  .tit-cabana-page {
+    padding-top: 2.5vh;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
     font-size: 3rem;
   }
-  .secdeportes div .pdeportes.precio {
-    font-size: 1.5rem;
+  .subtexto {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    padding: 0 20px;
   }
-  .titcabanapage {
-    padding-top: 2.5vh;
+  .banner-safaris {
+    display: none;
   }
-  .cabanasafari {
-    padding-bottom: 2vh;
-    flex-direction: column;
+  .banner-safaris-mobile {
+    display: contents;
+    padding-bottom: 80px;
   }
-  .cabanasafari .parrafocabanas {
-    width: 80vw;
-    font-size: 2.5vw;
+  .banner-safaris-mobile .tit-fotos-safari h2 {
+    color: #00bbd6;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    text-align: center;
   }
-  .bannersomos .titsomos {
-    font-size: 6vw;
+  .banner-safaris-mobile div div div h5 {
+    color: #00bbd6;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: white;
   }
-  .bannersomos .psomos {
-    font-size: 2.5vw;
+  .banner-safaris-mobile div div div p {
+    background-color: #f1bb1b;
+    color: black;
   }
-  .nuestrassomos .imgsomos2 .imgsomoss2 {
+  .banner-ancestral {
+    grid-template-columns: 100vw;
+    grid-template-rows: repeat(2, auto);
+  }
+  .banner-ancestral .tit-fotos-ancestral {
+    padding-top: 30px;
+    padding-bottom: 0;
+    grid-row: unset;
+    grid-column: unset;
+  }
+  .banner-ancestral .tit-fotos-ancestral h2 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+  }
+  .banner-ancestral .foto-ancestral-mobile {
+    display: contents;
+  }
+  .banner-ancestral .foto-ancestral-mobile div div div h5 {
+    color: #00bbd6;
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: white;
+  }
+  .banner-ancestral .foto-ancestral-mobile div div div p {
+    background-color: #f1bb1b;
+    color: black;
+  }
+  .banner-ancestral .img-ancestral-cabana {
+    grid-row: unset;
+    grid-column: unset;
+    display: none;
+  }
+  .banner-ancestral .tit-ancestral-cabana {
+    grid-column: unset;
+    grid-row: unset;
+    display: none;
+  }
+  .banner-ancestral .text-ancestral-cabana {
+    grid-column: unset;
+    grid-row: unset;
+    display: none;
+  }
+  .banner-somos .tit-somos {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  .banner-somos .psomos {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+  }
+  .nuestras-somos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    justify-items: center;
+  }
+  .nuestras-somos .img-somos2 .img-somoss2 {
     height: auto;
   }
-  .nuestrassomos .divparrafobanner .parrafobanner {
-    font-size: 2vw;
+  .nuestras-somos .div-parrafo-banner .parrafo-banner {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    width: 100%;
   }
-  .nuestrassomos .divparrafobanner .botonsomos {
-    font-size: 2vw;
+  .nuestras-somos .div-parrafo-banner .boton-somos {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
