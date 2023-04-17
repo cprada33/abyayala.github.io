@@ -65,7 +65,7 @@ $black: black;
     font-size: 1.6rem;
 }
 
-/* FONTS MEDIA QUERIS */
+/* FONTS 576 */
 
 @mixin parrafo-576 {
     @include regular;
@@ -95,6 +95,38 @@ $black: black;
 @mixin h3-576 {
     @include semibold;
     font-size: 1.6rem;
+}
+
+/* FONTS 429 */
+
+@mixin parrafo-429 {
+    @include regular;
+    font-size: 0.8rem;
+}
+
+@mixin mini-parrafo-429 {
+    @include regular;
+    font-size: 0.6rem;
+}
+
+@mixin h1-429 {
+    @include black;
+    font-size: 2.5rem;
+}
+
+@mixin h2-429 {
+    @include black;
+    font-size: 1.7rem;
+}
+
+@mixin h3-429 {
+    @include bold;
+    font-size: 1.7rem;
+}
+
+@mixin h3-429 {
+    @include semibold;
+    font-size: 1.4rem;
 }
 
 @import "index";
@@ -166,12 +198,8 @@ body {
 }
 
 /* MEDIA QUERIES */
-/*TABLET */
-@media only screen and (max-width: 768px) {
 
-}
-
-/* CELULAR */
+/* CELULARES GRANDES */
 
 @media only screen and (max-width: 576px) {
 
@@ -490,6 +518,348 @@ body {
                 font-size: 1rem;
                 width: 100%;
             }
+        }
+    }
+}
+
+/*CELULARES STANDARS */
+@media only screen and (max-width: 429px) {
+
+    // GENERAL //
+
+.newnav {
+    .img-nav {
+        height: auto;
+        padding: 0 0 0 0;
+        width: 38vw;
+    }
+    .navbar-collapse {
+        @include parrafo-429;
+    }
+}
+
+// INDEX //
+// INDEX: BANNER PRINCIPAL
+
+    .grid-banner {
+        grid-template-rows: repeat(6, auto);
+        grid-template-columns: 30vw 70vw;
+        .img-grid-banner {
+            grid-row: 1/7;
+            grid-column: 1/2;
+        }
+        .text-gridbanner-parent {
+            .text-gridbanner {
+                @include h1-429;
+            }
+        }
+        .text-gridbanner-parent .main {
+            align-self: self-end;
+            grid-row: 2/3;
+        }
+        .text-gridbanner-parent .blue {
+            grid-row: 3/4;
+        }
+        .text-gridbanner-parent .blue .segundo {
+            grid-row: 4/5;
+        }
+        .parrafogridbanner-parent {
+            .parrafogridbanner {
+                @include parrafo-429;
+                margin-top: 1rem;
+            }
+        }
+        .button-parent {
+            grid-row: 7/8;
+            grid-column: 1/3;
+            margin-bottom: 1rem;
+            .button-reserva {
+                @include parrafo-429;
+            }
+        }
+    }
+
+// INDEX: SEC CABAÑAS
+
+    .secCabanas {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        .tit-ancestral {
+            order: -3;
+            .tit-cab {
+                @include h2-429;
+            }
+        }
+        .tit-safari {
+            order: 1;
+            .tit-cab {
+                @include h2-429;
+            }
+        }
+        .img-safari {
+            order: 2;
+            .cabanas {
+                width: 60vw;
+            }
+        }
+        .img-ancestral {
+            order: -2;
+            .cabanas {
+                width: 60vw;
+            }
+        }
+        .pr-ancestral {
+            order: -1;
+            .precio {
+                @include h3-429;
+            }
+        }
+        .pr-safari {
+            order: 3;
+            .precio {
+                @include h3-429;
+            }
+        }
+        .incluye {
+            grid-column: unset;
+            order: 6;
+            @include parrafo-429;
+            padding: 0 5%;
+            text-align: center;
+            .incluye-titulo {
+                @include h2-429;
+                color: $third;
+            }
+        }
+    }
+
+// INDEX: BANNER FOTOS
+
+    .banner-fotos {
+        grid-template-rows: repeat(4, 20vh);
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+// INDEX: LOCATION
+
+    .location {
+        grid-template-columns: 100vw;
+        grid-template-rows: auto auto auto auto;
+        .hlocation {
+            grid-column: unset;
+            @include h1-429;
+        }
+        #dlocation {
+            grid-row: unset;
+            height: 40vh;
+        }
+        .div-location {
+            .dlocation {
+                @include h2-429;
+            }
+            .horariosLocation {
+                @include parrafo-429;
+            }
+        }
+    }
+
+    // FOOTER 
+
+    .footer {
+        .correo {
+            @include parrafo-429;
+        }
+        .text-footer {
+            @include mini-parrafo-429;
+            padding: 0 2vw;
+        }
+        .text-footer-dos {
+            font-size: 0.4rem;
+        }
+    }
+    
+    // ACTIVIDADES PAGE //
+
+    // SEC ACTIVIDADES 
+
+    .tit-deportes {
+        @include h1-429;
+    }
+
+    .text-deportes {
+        @include parrafo-429;
+        margin-bottom: -1px;
+    }
+
+    .sec-deportes {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        align-content: center;
+        text-align: center;
+        padding-top: 25px;
+        .img-deporte {
+            width: 70vw;
+        }
+        .iframe-cascada {
+            grid-column: unset;
+            display: none;
+        }
+        .carrusel {
+            grid-column: unset;
+            display: none;
+        }
+        div {
+            .pdeportes {
+                @include h2-429;
+            }
+            .pdeportes.precio {
+                @include parrafo;
+            }
+        }
+    }
+
+    // CABAÑAS PAGE //
+
+    .tit-cabana-page {
+        padding-top: 2.5vh;
+        @include h1-429;
+    }
+
+    .subtexto {
+        @include parrafo-429;
+        padding: 0 20px;
+    }
+
+    .banner-safaris {
+        display: none;
+    }
+
+    .banner-safaris-mobile {
+        display: contents;
+        padding-bottom: 80px;
+        .tit-fotos-safari {
+            h2 {
+                color: $main;
+                @include h2-429;
+                text-align: center;
+            }
+        }
+        div {
+            div {
+                div {
+                    h5 {
+                        color: $main;
+                        @include h2-429;
+                        background-color: $white;
+                    }
+                    p {
+                        background-color: $third;
+                        color: $black;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-ancestral {
+        grid-template-columns: 100vw;
+        grid-template-rows: repeat(2, auto);
+        .tit-fotos-ancestral {
+            padding-top: 30px;
+            padding-bottom: 0;
+            grid-row: unset;
+            grid-column: unset;
+            h2 {
+                @include h2-429;
+            }
+        }
+        .foto-ancestral-mobile {
+            display: contents;
+            div {
+                div {
+                    div {
+                        h5 {
+                            color: $main;
+                            @include h2-429;
+                            background-color: $white;
+                        }
+                        p {
+                            background-color: $third;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        .img-ancestral-cabana {
+            grid-row: unset;
+            grid-column: unset;
+            display: none;
+        }
+        .tit-ancestral-cabana {
+            grid-column: unset;
+            grid-row: unset;
+            display: none;
+        }
+        .text-ancestral-cabana {
+            grid-column: unset;
+            grid-row: unset;
+            display: none;
+        }
+    }
+
+    // QUIENES SOMOS PAGE //
+
+    .img-somos {
+        height: 50vh;
+    }
+
+    .banner-somos {
+        .tit-somos {
+            @include h1-429;
+            padding: 20px 10px 0 10px;
+        }
+        .psomos {
+            @include parrafo-429;
+        }
+    }
+
+    .nuestras-somos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        justify-items: center;
+        .img-somos2 {
+            .img-somoss2 {
+                height: auto;
+            }
+        }
+        .div-parrafo-banner {
+            .parrafo-banner {
+                @include parrafo-429;
+                width: 100%;
+            }
+            .boton-somos {
+                @include black;
+                text-align: center;
+                font-size: 1rem;
+                width: 100%;
+            }
+        }
+    }
+
+    // CONTACTO
+
+    .titulo-form {
+        @include h1-429;
+    }
+
+    .grid-form {
+        @include parrafo-429;
+    }
+
+    .contactoEncuentranos {
+        h2 {
+            @include h2-429;
         }
     }
 }
