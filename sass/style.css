@@ -467,7 +467,6 @@
   align-self: self-end;
 }
 .nuestras-somos .div-tit-banner-cabanas .tit-banner-cabanas {
-  font-size: 4vw;
   font-family: "Raleway", sans-serif;
   font-weight: 900;
   font-size: 2.5rem;
@@ -1157,21 +1156,37 @@ body h1 {
     grid-template-rows: repeat(3, auto);
     justify-items: center;
   }
+  .nuestras-somos .img-somos2 {
+    margin: 0 17px;
+  }
   .nuestras-somos .img-somos2 .img-somoss2 {
     height: auto;
+  }
+  .nuestras-somos .div-tit-banner-cabanas {
+    text-align: center;
+  }
+  .nuestras-somos .div-tit-banner-cabanas .tit-banner-cabanas {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 1.7rem;
+    margin: 10px 0;
+  }
+  .nuestras-somos .div-parrafo-banner {
+    align-items: center;
   }
   .nuestras-somos .div-parrafo-banner .parrafo-banner {
     font-family: "Raleway", sans-serif;
     font-weight: 400;
     font-size: 0.8rem;
     width: 100%;
+    padding: 0 10px;
   }
   .nuestras-somos .div-parrafo-banner .boton-somos {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
     text-align: center;
     font-size: 1rem;
-    width: 100%;
+    width: 50%;
   }
   .titulo-form {
     font-family: "Raleway", sans-serif;

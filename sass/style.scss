@@ -832,20 +832,30 @@ body {
         grid-template-rows: repeat(3, auto);
         justify-items: center;
         .img-somos2 {
+            margin: 0 17px;
             .img-somoss2 {
                 height: auto;
             }
         }
+        .div-tit-banner-cabanas{
+            text-align: center;
+            .tit-banner-cabanas {
+                @include h2-429;
+                margin: 10px 0;
+            }
+        }
         .div-parrafo-banner {
+            align-items: center;
             .parrafo-banner {
                 @include parrafo-429;
                 width: 100%;
+                padding: 0 10px;
             }
             .boton-somos {
                 @include black;
                 text-align: center;
                 font-size: 1rem;
-                width: 100%;
+                width: 50%;
             }
         }
     }
