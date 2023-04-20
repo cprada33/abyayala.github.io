@@ -551,6 +551,7 @@ body {
         .text-gridbanner-parent {
             .text-gridbanner {
                 @include h1-429;
+                margin: 0;
             }
         }
         .text-gridbanner-parent .main {

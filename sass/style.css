@@ -880,6 +880,7 @@ body h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
     font-size: 2.3rem;
+    margin: 0;
   }
   .grid-banner .text-gridbanner-parent .main {
     align-self: self-end;
