@@ -880,7 +880,7 @@ body h1 {
   .grid-banner .text-gridbanner-parent .text-gridbanner {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .grid-banner .text-gridbanner-parent .main {
     align-self: self-end;
@@ -983,7 +983,7 @@ body h1 {
     grid-column: unset;
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .location #dlocation {
     grid-row: unset;
@@ -1016,7 +1016,7 @@ body h1 {
   .tit-deportes {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .text-deportes {
     font-family: "Raleway", sans-serif;
@@ -1056,7 +1056,7 @@ body h1 {
     padding-top: 2.5vh;
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .subtexto {
     font-family: "Raleway", sans-serif;
@@ -1069,7 +1069,9 @@ body h1 {
   }
   .banner-safaris-mobile {
     display: contents;
-    padding-bottom: 80px;
+  }
+  .banner-safaris-mobile div {
+    padding: 5px;
   }
   .banner-safaris-mobile .tit-fotos-safari h2 {
     color: #00bbd6;
@@ -1107,6 +1109,9 @@ body h1 {
   .banner-ancestral .foto-ancestral-mobile {
     display: contents;
   }
+  .banner-ancestral .foto-ancestral-mobile div {
+    padding: 5px;
+  }
   .banner-ancestral .foto-ancestral-mobile div div div h5 {
     color: #00bbd6;
     font-family: "Raleway", sans-serif;
@@ -1139,7 +1144,7 @@ body h1 {
   .banner-somos .tit-somos {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     padding: 20px 10px 0 10px;
   }
   .banner-somos .psomos {
@@ -1171,7 +1176,7 @@ body h1 {
   .titulo-form {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
   .grid-form {
     font-family: "Raleway", sans-serif;

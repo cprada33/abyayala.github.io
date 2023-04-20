@@ -111,7 +111,7 @@ $black: black;
 
 @mixin h1-429 {
     @include black;
-    font-size: 2.5rem;
+    font-size: 2.3rem;
 }
 
 @mixin h2-429 {
@@ -736,7 +736,9 @@ body {
 
     .banner-safaris-mobile {
         display: contents;
-        padding-bottom: 80px;
+        div {
+            padding: 5px;
+        }
         .tit-fotos-safari {
             h2 {
                 color: $main;
@@ -776,6 +778,7 @@ body {
         .foto-ancestral-mobile {
             display: contents;
             div {
+                padding: 5px;
                 div {
                     div {
                         h5 {
