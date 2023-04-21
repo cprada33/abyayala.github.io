@@ -929,13 +929,13 @@ body h1 {
     font-size: 1.7rem;
   }
   .secCabanas .img-safari {
-    order: 2;
+    order: -2;
   }
   .secCabanas .img-safari .cabanas {
     width: 60vw;
   }
   .secCabanas .img-ancestral {
-    order: -2;
+    order: 2;
   }
   .secCabanas .img-ancestral .cabanas {
     width: 60vw;
