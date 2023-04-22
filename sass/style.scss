@@ -548,6 +548,14 @@ body {
             }
         }
     }
+
+    .boton-menu {
+        width: 50%;
+        margin-left: 25%;
+        a {
+            @include h2-576;
+        }
+    }
 }
 
 /*CELULARES STANDARS */

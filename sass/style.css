@@ -520,13 +520,27 @@ section .menu .carousel {
   width: auto;
 }
 section .menu .carousel .carousel-inner .carousel-item {
-  right: -34%;
+  right: -35%;
 }
 section .menu .carousel .carousel-inner .carousel-item #img-menu {
   height: 80vh;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.boton-menu {
+  text-align: center;
+  border: 0.3em solid #f1bb1b;
+  width: 25%;
+  margin-left: 37%;
+}
+.boton-menu a {
+  text-decoration: unset;
+  color: #f1bb1b;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
 }
 
 /* GENERAL */
@@ -908,6 +922,15 @@ body h1 {
     width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
+  }
+  .boton-menu {
+    width: 50%;
+    margin-left: 25%;
+  }
+  .boton-menu a {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
   }
 }
 /*CELULARES STANDARS */

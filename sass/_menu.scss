@@ -14,7 +14,7 @@ section {
             width: auto;
             .carousel-inner {
                 .carousel-item {
-                    right: -34%;
+                    right: -35%;
                     #img-menu {
                         height: 80vh;
                         width: auto;
@@ -23,5 +23,17 @@ section {
                 }
             }
         }
+    }
+}
+
+.boton-menu {
+    text-align: center;
+    border: 0.3em solid $third;
+    width: 25%;
+    margin-left: 37%;
+    a {
+        text-decoration: unset;
+        color: $third;
+        @include h2;
     }
 }
