@@ -890,6 +890,7 @@ body h1 {
     font-family: "Raleway", sans-serif;
     font-weight: 900;
     font-size: 3rem;
+    margin: 0;
   }
   section .menu {
     height: auto;

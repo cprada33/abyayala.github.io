@@ -527,6 +527,7 @@ body {
     section {
         .titulo-menu {
             @include h1-576;
+            margin: 0;
         }
         .menu {
             height: auto;
