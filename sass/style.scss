@@ -134,6 +134,7 @@ $black: black;
 @import "cabanas";
 @import "contacto";
 @import "quienes-somos";
+@import "menu";
 
 
 /* GENERAL */
@@ -517,6 +518,32 @@ body {
                 text-align: center;
                 font-size: 1rem;
                 width: 100%;
+            }
+        }
+    }
+
+    // MENU
+
+    section {
+        .titulo-menu {
+            @include h1-576;
+        }
+        .menu {
+            height: auto;
+            width: 100%;
+            .carousel {
+                height: auto;
+                width: 100%;
+                .carousel-inner {
+                    .carousel-item {
+                        right: unset;
+                        #img-menu {
+                            height: auto;
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
             }
         }
     }

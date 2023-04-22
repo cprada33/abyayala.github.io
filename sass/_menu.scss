@@ -1,0 +1,27 @@
+section {
+    .titulo-menu {
+        @include h1;
+        color: $main;
+        text-align: center;
+        margin: 0 0 -20px 0;
+    }
+    .menu {
+        height: 80vh;
+        width: auto;
+        margin-bottom: 20px;
+        .carousel {
+            height: 80vh;
+            width: auto;
+            .carousel-inner {
+                .carousel-item {
+                    right: -34%;
+                    #img-menu {
+                        height: 80vh;
+                        width: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+    }
+}

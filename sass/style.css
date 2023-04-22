@@ -105,6 +105,10 @@
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
+.secCabanas .incluye p a {
+  text-decoration: none;
+  color: #f1bb1b;
+}
 
 /* BANNER FOTOS */
 .banner-fotos {
@@ -498,6 +502,33 @@
   font-weight: 700;
 }
 
+section .titulo-menu {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 6.3rem;
+  color: #00bbd6;
+  text-align: center;
+  margin: 0 0 -20px 0;
+}
+section .menu {
+  height: 80vh;
+  width: auto;
+  margin-bottom: 20px;
+}
+section .menu .carousel {
+  height: 80vh;
+  width: auto;
+}
+section .menu .carousel .carousel-inner .carousel-item {
+  right: -34%;
+}
+section .menu .carousel .carousel-inner .carousel-item #img-menu {
+  height: 80vh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 /* GENERAL */
 body {
   width: 100vw;
@@ -854,6 +885,28 @@ body h1 {
     text-align: center;
     font-size: 1rem;
     width: 100%;
+  }
+  section .titulo-menu {
+    font-family: "Raleway", sans-serif;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  section .menu {
+    height: auto;
+    width: 100%;
+  }
+  section .menu .carousel {
+    height: auto;
+    width: 100%;
+  }
+  section .menu .carousel .carousel-inner .carousel-item {
+    right: unset;
+  }
+  section .menu .carousel .carousel-inner .carousel-item #img-menu {
+    height: auto;
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
 }
 /*CELULARES STANDARS */
