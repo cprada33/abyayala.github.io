@@ -37,3 +37,21 @@ section {
         @include h2;
     }
 }
+
+section {
+    .menu-banner-main {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(5, auto);
+        gap: 20px;
+        margin: 20px;
+        div {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
