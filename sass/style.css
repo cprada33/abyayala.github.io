@@ -53,6 +53,10 @@
   border: #228fa2 0.3vw solid;
   color: white;
 }
+.grid-banner .booking {
+  align-content: baseline;
+  justify-content: center;
+}
 
 /* INFORMACION DE CABANAS */
 .secCabanas {
