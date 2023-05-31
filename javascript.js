@@ -24,9 +24,6 @@ function getDatesInRange(fechaIn, fechaOut){
 
 getDatesInRange()
 
-document.addEventListener("DOMContentLoaded", function(){
-    console.log(dates);
-})
 
 let fechasReservadas = {};
 
