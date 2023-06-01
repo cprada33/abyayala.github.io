@@ -3,6 +3,7 @@ let fechaOut = localStorage.getItem("fechaOut");
 let cantidadSafaris = 8;
 let cantidadAncestral = 1;
 let fechasReservadasSafari = [];
+localStorage.setItem('fechasReservadasSafari', JSON.stringify(fechasReservadasSafari));
 let fechasReservadasAncestral = [];
 
 function getDatesInRange(fechaIn, fechaOut){
@@ -37,3 +38,10 @@ function disponibilidad(solicitud, fechasReservadasSafari){
 }
 
 disponibilidadSafari.innerText = cantidadSafaris - disponibilidad(solicitud, fechasReservadasSafari);
+
+let reservarUno = document.getElementById('btn-reservar-uno');
+reservarUno.addEventListener("click", function() {
+
+    event.preventDefault();
+    window.location.href = 'reservar.html';
+})

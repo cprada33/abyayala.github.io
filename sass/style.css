@@ -557,6 +557,15 @@ section .menu .carousel .carousel-inner .carousel-item #img-menu {
   -o-object-fit: cover;
      object-fit: cover;
   height: 80%;
+  grid-row: 1/5;
+}
+.card-safari div h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  font-size: 4rem;
+  color: #00bbd6;
+  text-align: center;
 }
 
 /* GENERAL */

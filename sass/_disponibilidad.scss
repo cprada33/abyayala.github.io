@@ -7,5 +7,15 @@
     .card-img {
         object-fit: cover;
         height: 80%;
+        grid-row: 1/5
+    }
+    div {
+        h2 {
+            @include h2;
+            font-size: 4rem;
+            color: $main;
+            text-align: center;
+
+        }
     }
 }
