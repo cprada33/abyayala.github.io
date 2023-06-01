@@ -547,6 +547,18 @@ section .menu .carousel .carousel-inner .carousel-item #img-menu {
   font-size: 2.5rem;
 }
 
+/* CABAÑAS */
+.card-safari {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.card-safari .card-img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 80%;
+}
+
 /* GENERAL */
 body {
   width: 100vw;
