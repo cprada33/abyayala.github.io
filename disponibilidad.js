@@ -12,7 +12,8 @@ function getDatesInRange(fechaIn, fechaOut){
     let endDate = new Date(fechaOut);
 
     while (currentDate <= endDate) {
-        dates.push(new Date(currentDate));
+        let currentDateFormatted = currentDate.toISOString().slice(0, 10);
+        dates.push(currentDateFormatted);
         currentDate.setDate(currentDate.getDate() + 1);
     }
 
@@ -20,6 +21,8 @@ function getDatesInRange(fechaIn, fechaOut){
 }
 
 let solicitud = getDatesInRange(fechaIn, fechaOut);
+
+console.log(solicitud)
 
 let disponibilidadSafari = document.getElementById('disponibilidad-safari');
 
@@ -37,7 +40,9 @@ function disponibilidad(solicitud, fechasReservadasSafari){
     return ocupadas;
 }
 
-disponibilidadSafari.innerText = cantidadSafaris - disponibilidad(solicitud, fechasReservadasSafari);
+let resultadoOcupadas = cantidadSafaris - disponibilidad(solicitud, fechasReservadasSafari);
+
+disponibilidadSafari.innerText = 'Cabañas disponibles: ' + resultadoOcupadas ;
 
 let reservarUno = document.getElementById('btn-reservar-uno');
 reservarUno.addEventListener("click", function() {

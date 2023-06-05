@@ -3,13 +3,17 @@
 .card-safari {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
     .card-img {
         object-fit: cover;
         height: 80%;
-        grid-row: 1/5
+        grid-row: 1/5;
+        padding: 40px 0 0 60px; 
     }
     div {
+        height: auto;
+    }
+    .parent-titulo-reserva {
         h2 {
             @include h2;
             font-size: 4rem;
@@ -17,5 +21,15 @@
             text-align: center;
 
         }
+    }
+    .detalles {
+        height: auto;
+        text-align: center;
+        @include mini-parrafo;
+    }
+    .seleccionCabanas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
