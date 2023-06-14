@@ -49,30 +49,78 @@
 
   <main>
     <section>
+      <!-- CARD SAFARI-->
       <div>
-        <div class="card-safari">
+        <!-- IMAGE Y TITULO -->
+        <div class="cardCabanas safari">
           <img class="card-img" src="../imagenes/polekakasue.jpg" alt="Safari">
           <div class="parent-titulo-reserva">
             <h2 class="titulo-reserva">CABAÑA SAFARI</h2>
           </div>
+          <!-- DETALLES -->
           <div class="detalles">
             <p>🛏️ Cama doble</p>
             <p>🛁 Baño compartido</p>
-            <p>🍴 Desayuno incluido</p>
+            <p>🍳 Desayuno incluido</p>
             <p>🧖🏻 Toallas</p>
             <p>👩🏿‍🤝‍👨🏻 2 personas.</p>
             <p>💵 Precio: 320.000</p>
           </div>
+          <!-- SELECCION Y RESERVA  -->
           <div class="seleccionCabanas">
-            <p id="disponibilidad-safari"></p>
-            <div>
-              <button></button>
+            <p class="disponibilidad" id="disponibilidad-safari"></p>
+            <div class="cantidadCabanas">
+              <select id="cantidadDeCabanasSafari" class="form-select" aria-label="Habitaciones">
+                <!-- <option selected disabled id="option0" value="0">0</option> -->
+                <option id="option1" value="1">1</option>
+                <option id="option2" value="2">2</option>
+                <option id="option3" value="3">3</option>
+                <option id="option4" value="4">4</option>
+                <option id="option5" value="5">5</option>
+                <option id="option6" value="6">6</option>
+                <option id="option7" value="7">7</option>
+                <option id="option8" value="8" >8</option>
+              </select>
             </div>
-            <div class="col-12">
-              <button id="btn-reservar-uno" type="submit" class="btn btn-primary">Reservar</button>
+            <div class="botonReservar col-12">
+              <button id="reservar-safari" type="submit" class="btn btn-primary">Reservar</button>
             </div>
           </div>
         </div>
+
+        <!-- CARD ANCESTRAL-->
+      <div>
+        <!-- IMAGE Y TITULO -->
+        <div class="cardCabanas ancestral">
+          <img class="card-img" src="../imagenes/imagen6.jpg" alt="Ancestral">
+          <div class="parent-titulo-reserva">
+            <h2 class="titulo-reserva">CABAÑA ANCESTRAL</h2>
+          </div>
+          <!-- DETALLES -->
+          <div class="detalles">
+            <p>🛏️ Cama doble y habitación deluxe</p>
+            <p>🛁 Baño privado</p>
+            <p>🍳 Desayuno incluido</p>
+            <p>🧖🏻 Toallas</p>
+            <p>👩🏿‍🤝‍👨🏻 2 personas.</p>
+            <p>🏞️ Vista a la montaña.</p>
+            <p>💵 Precio: 420.000</p>
+          </div>
+          <!-- SELECCION Y RESERVA  -->
+          <div class="seleccionCabanas">
+            <p class="disponibilidad" id="disponibilidad-ancestral"></p>
+            <div class="cantidadCabanas">
+              <select id="cantidadDeCabanasAncestral" class="form-select" aria-label="Habitaciones">
+                <!-- <option disabled id="option1Ancestral" selected value="0">0</option> -->
+                <option id="option1Ancestral" value="1">1</option>
+              </select>
+            </div>
+            <div class="botonReservar col-12">
+              <button id="reservar-ancestral" type="submit" class="btn btn-primary">Reservar</button>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>

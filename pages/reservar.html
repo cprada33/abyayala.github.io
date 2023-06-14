@@ -48,42 +48,53 @@
   </header>
 
   <main>
-    <section>
-        <form class="row g-3">
+    <section class="formularioReserva">
+        <h1>DATOS DE RESERVA</h1>
+        <form class="formReserva row g-3">
             <div class="col-12">
-                <label for="inputAddress" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="inputAddress">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
               </div>
             <div class="col-md-6">
-              <label for="inputEmail4" class="form-label">Celular</label>
-              <input type="email" class="form-control" id="inputEmail4">
+              <label for="celular" class="form-label">Celular</label>
+              <input minlength="10" type="text" class="form-control" id="celular">
             </div>
             <div class="col-md-6">
-              <label for="inputPassword4" class="form-label">Correo</label>
-              <input type="password" class="form-control" id="inputPassword4">
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correo">
             </div>
             <div class="col-md-6">
-                <label for="inputEmail4" class="form-label">Cédula</label>
-                <input type="email" class="form-control" id="inputEmail4">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" class="form-control" id="cedula">
               </div>
               <div class="col-md-6">
-                <label for="inputPassword4" class="form-label">Dirección</label>
-                <input type="password" class="form-control" id="inputPassword4">
+                <label for="huespedes" class="form-label">Número de huespedes</label>
+                <select class="form-select" aria-label="Habitaciones" id="huespedes">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
               </div>
             <div class="col-12">
-              <label for="inputAddress2" class="form-label">Acompañantes</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              <label for="acompañantes" class="form-label">Acompañantes</label>
+              <input type="text" class="form-control" id="acompañantes" placeholder="Nombres y número de cedulas">
             </div>
             <div id="informacionPrevia">
-                <p id="fechaReservaIn">h</p>
-                <p id="fechaReservaOut">h</p>
-                <p id="tipoCabaña">h</p>
-                <p id="cantidadCabanas">h</p>
-                <p id="cantidadPersonas">h</p>
+                <p class="labeldatoInterno">TIPO DE CABAÑA: </p><p class="datoInterno" id="tipoCabaña"></p>
+                <p class="labeldatoInterno">CANTIDAD DE CABAÑAS: </p><p class="datoInterno" class="datoInterno" id="cantidadCabanas"></p>
+                <p class="labeldatoInterno">FECHA CHECK IN: </p><p class="datoInterno" id="fechaReservaIn"></p>
+                <p class="labeldatoInterno">FECHA CHECK OUT: </p><p class="datoInterno" id="fechaReservaOut"></p>
+                <p class="labeldatoInterno">PRECIO TOTAL: </p><p class="datoInterno" id="precioFinal"></p>
             </div>
-            <div class="col-12">
-              <button id="reservar" type="submit" class="btn btn-primary">Reservar</button>
+            <div class="botonFinal col-12">
+              <button id="reservar" type="submit" class="btn btn-primary">Finalizar reserva</button>
             </div>
+            <p id="errorDatos"></p>
           </form>
     </section>
   </main>
