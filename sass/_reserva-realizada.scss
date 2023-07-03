@@ -1,0 +1,28 @@
+.confirmacion {
+    .tituloConfirmacion {
+        @include h1;
+        text-align: center;
+        color: $main;
+        padding-top: 40px;
+    }
+    .textoConfirmacion {
+        @include parrafo;
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        .menuConfirmacion {
+            font-style: unset;
+            @include parrafo;
+            color: $third;
+            text-align: center;
+        }
+    }
+    .imagenConfirmacion {
+        text-align: center;
+        width: 30%;
+        padding-bottom: 40px;
+        display: block;
+        margin: auto;
+    }
+}

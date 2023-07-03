@@ -15,102 +15,121 @@
         <link rel="stylesheet" href="../sass/style.css">
         <title>Abya Yala Hostel: disponibilidad</title>
     </head>
-    <header>
-      <section class="newnav">
-          <a href="../index.html"><img class="img-nav" src="../imagenes/logoabyayala.png" alt="logo-abyayala"></a>
-          <nav class="navbar navbar-expand-lg navbar-light">
-              <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                  <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="actividades.html">Actividades</a>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link" aria-current="page" href="cabanas.html">Cabañas</a>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a>
-                      </li>
-                      <li class="nav-item">
-                      <a class="nav-link" href="contacto.html">Contacto</a>
-                      </li>
-                  </ul>
-              </div>
-              </div>
-        </nav>
-      </section>
-  </header>
-
-  <main>
-    <section class="formularioReserva">
-        <h1>DATOS DE RESERVA</h1>
-        <form class="formReserva row g-3">
-            <div class="col-12">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre">
-              </div>
-            <div class="col-md-6">
-              <label for="celular" class="form-label">Celular</label>
-              <input minlength="10" type="text" class="form-control" id="celular">
-            </div>
-            <div class="col-md-6">
-              <label for="correo" class="form-label">Correo</label>
-              <input type="email" class="form-control" id="correo">
-            </div>
-            <div class="col-md-6">
-                <label for="cedula" class="form-label">Cédula</label>
-                <input type="text" class="form-control" id="cedula">
-              </div>
-              <div class="col-md-6">
-                <label for="huespedes" class="form-label">Número de huespedes</label>
-                <select class="form-select" aria-label="Habitaciones" id="huespedes">
-                  <option selected value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                </select>
-              </div>
-            <div class="col-12">
-              <label for="acompañantes" class="form-label">Acompañantes</label>
-              <input type="text" class="form-control" id="acompañantes" placeholder="Nombres y número de cedulas">
-            </div>
-            <div id="informacionPrevia">
-                <p class="labeldatoInterno">TIPO DE CABAÑA: </p><p class="datoInterno" id="tipoCabaña"></p>
-                <p class="labeldatoInterno">CANTIDAD DE CABAÑAS: </p><p class="datoInterno" class="datoInterno" id="cantidadCabanas"></p>
-                <p class="labeldatoInterno">FECHA CHECK IN: </p><p class="datoInterno" id="fechaReservaIn"></p>
-                <p class="labeldatoInterno">FECHA CHECK OUT: </p><p class="datoInterno" id="fechaReservaOut"></p>
-                <p class="labeldatoInterno">PRECIO TOTAL: </p><p class="datoInterno" id="precioFinal"></p>
-            </div>
-            <div class="botonFinal col-12">
-              <button id="reservar" type="submit" class="btn btn-primary">Finalizar reserva</button>
-            </div>
-            <p id="errorDatos"></p>
-          </form>
-    </section>
-  </main>
-
-  <footer>
-    <section class="footer">
-        <div class="correo">
-            <i class="bi bi-envelope-fill"> reservas.abyayalahostel@gmail.com</i>
-        </div>
-        <div class="text-footer">Puedes entregar tu habitación y seguir disfrutando de nuestros servicios Abya Yala Hostel hasta las 5:00pm.</div>
-        <div class="text-footer-dos primero">Copyright @ ABYA YALA HOSTEL</div>
-        <div class="text-footer-dos">Nimaima, Cundinamarca</div>
-    </section>
-</footer>
-  <script src="../reservar.js"></script>
 <body>
-  
+  <header>
+    <section class="newnav">
+        <a href="../index.html"><img class="img-nav" src="../imagenes/logoabyayala.png" alt="logo-abyayala"></a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="actividades.html">Actividades</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="cabanas.html">Cabañas</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="quienes-somos.html">¿Quienes somos?</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+      </nav>
+    </section>
+</header>
+
+<main>
+  <section class="formularioReserva">
+      <h1>DATOS DE RESERVA</h1>
+      <!-- class="formReserva row g-3" -->
+      <form action="/files" method="post" enctype="multipart/form-data">
+          <div class="col-12">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+          <div class="col-md-6">
+            <label for="celular" class="form-label">Celular</label>
+            <input minlength="10" type="text" class="form-control" id="celular">
+          </div>
+          <div class="col-md-6">
+            <label for="correo" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="correo">
+          </div>
+          <div class="col-md-6">
+              <label for="cedula" class="form-label">Cédula</label>
+              <input type="text" class="form-control" id="cedula">
+            </div>
+            <div class="col-md-6">
+              <label for="huespedes" class="form-label">Número de huespedes</label>
+              <select class="form-select" aria-label="Habitaciones" id="huespedes">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+              </select>
+            </div>
+          <div class="col-12">
+            <label for="acompañantes" class="form-label">Acompañantes</label>
+            <input type="text" class="form-control" id="acompañantes" placeholder="Nombres y número de cedulas">
+          </div>
+          <div id="informacionPrevia">
+              <p class="labeldatoInterno">TIPO DE CABAÑA: </p><p class="datoInterno" id="tipoCabaña"></p>
+              <p class="labeldatoInterno">CANTIDAD DE CABAÑAS: </p><p class="datoInterno" class="datoInterno" id="cantidadCabanas"></p>
+              <p class="labeldatoInterno">FECHA CHECK IN: </p><p class="datoInterno" id="fechaReservaIn"></p>
+              <p class="labeldatoInterno">FECHA CHECK OUT: </p><p class="datoInterno" id="fechaReservaOut"></p>
+              <p class="labeldatoInterno">PRECIO TOTAL: </p><p class="datoInterno" id="precioFinal"></p>
+              <div class="comprobante">
+                <p class="labeldatoInterno">COMPROBANTE DE PAGO: </p>
+                <input type="file" name="archivo" id="archivo">
+              </div>
+          <section>
+            <p>REEMPLAZO</p>
+            <form action="/files" method="post" enctype="multipart/form-data" id="formulario">
+              <div>
+                  <input type="text" name="" id="">
+              </div>
+              <div>
+                  <input type="file" name="archivo" id="archivo">
+              </div>
+              <div>
+                  <button id="boton" value="Enviar">ENVIAR</button>
+              </div>
+          </form>
+          </section>
+
+          </div>
+          <div class="botonFinal col-12">
+            <button id="reservar" class="btn btn-primary">Finalizar reserva</button>
+          </div>
+          <p id="errorDatos"></p>
+        </form>
+  </section>
+</main>
+
+<footer>
+  <section class="footer">
+      <div class="correo">
+          <i class="bi bi-envelope-fill"> reservas.abyayalahostel@gmail.com</i>
+      </div>
+      <div class="text-footer">Puedes entregar tu habitación y seguir disfrutando de nuestros servicios Abya Yala Hostel hasta las 5:00pm.</div>
+      <div class="text-footer-dos primero">Copyright @ ABYA YALA HOSTEL</div>
+      <div class="text-footer-dos">Nimaima, Cundinamarca</div>
+  </section>
+</footer>
+<script src="../reservar.js"></script>
 </body>
 </html>

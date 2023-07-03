@@ -2,6 +2,7 @@ let fechaIn = localStorage.getItem("fechaIn");
 let fechaOut = localStorage.getItem("fechaOut");
 let cantidadSafaris = 8;
 let cantidadAncestral = 1;
+let reservaRealizada = false;
 
 // DIVISON DE FECHAS
 function getDatesInRange(fechaIn, fechaOut){
@@ -174,6 +175,7 @@ reservarSafari.addEventListener("click", function() {
     let numCantidadCabanas = cantidadCabanasSafari.value;
     localStorage.setItem("tipoDeCabaña", 'Safari');
     localStorage.setItem("cantidadDeCabañas", numCantidadCabanas.toString());
+    localStorage.setItem('ReservaRealizada', reservaRealizada);
     window.location.href = 'reservar.html';
 })
     //ANCESTRAL
@@ -186,6 +188,7 @@ reservarAncestral.addEventListener("click", function() {
     let numCantidadCabanas = cantidadCabanasAncestral.value;
     localStorage.setItem("tipoDeCabaña", 'Ancestral');
     localStorage.setItem("cantidadDeCabañas", numCantidadCabanas.toString());
+    localStorage.setItem('ReservaRealizada', reservaRealizada);
     window.location.href = 'reservar.html';
 })
 

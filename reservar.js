@@ -9,6 +9,7 @@ let fechaIn = localStorage.getItem("fechaIn");
 let fechaOut = localStorage.getItem("fechaOut");
 let tipoDeCabaña = localStorage.getItem("tipoDeCabaña");
 let precioFinal = document.getElementById('precioFinal');
+let reservaRealizada = true;
 
 // INFORMACIÓN PREVIA DE RESERVA
 fechaReservaIn.innerText = fechaIn;
@@ -33,7 +34,6 @@ function getDatesInRange(fechaIn, fechaOut){
 }
 
 let solicitud = getDatesInRange(fechaIn, fechaOut);
-console.log(solicitud);
 
 // ESTABLECER PRECIO FINAL
 
@@ -48,13 +48,11 @@ if (tipoDeCabaña == 'Safari') {
   precioTotal = precioAncestral.toLocaleString();
   precioFinal.innerText = precioAncestral.toLocaleString();
 }
-console.log('primero: ', precioTotal)
+
 // ENVIO DE DATOS A TABLE DE RESERVA
 
 botonReservar.addEventListener('click', function(){
-
   event.preventDefault();
-  console.log('segundo: ', precioTotal)
 
   let nombre = document.getElementById('nombre').value;
   let celular = document.getElementById('celular').value;
@@ -62,11 +60,24 @@ botonReservar.addEventListener('click', function(){
   let cedula = document.getElementById('cedula').value;
   let huespedes = document.getElementById('huespedes').value;
   let acompanantes = document.getElementById('acompañantes').value;
-  let errorDatos = document.getElementById('errorDatos')
+  let comprobante = document.getElementById('archivo').value;
+  let errorDatos = document.getElementById('errorDatos');
+  let blockReservaRealizada = localStorage.getItem('ReservaRealizada');
 
-  if ( nombre == '' || celular == '' || correo == '' || cedula == '' || huespedes == '' || acompanantes == '' ) {
+  if ( nombre == '' || celular == '' || correo == '' || cedula == '' || huespedes == '' || acompanantes == '' || comprobante == '' ) {
     errorDatos.innerText = 'Para finalizar la reserva debes completar todos los campos.';
-  } else {
+  } else if ( nombre !== '' || celular !== '' || correo !== '' || cedula !== '' || huespedes !== '' || acompanantes !== '' || comprobante !== '' ) {
+
+    // ENVIO DEL ARCHIVO 
+    const archivo = document.getElementById('archivo').files[0];
+    console.log(archivo)
+    
+    fetch ('/files', {
+      method: 'POST',
+      body: archivo
+    }).then(() => {
+      console.log('Archivo subido')
+    });
 
     // ENVIO DE DATOS
 for (let i = 0; i < seleccionCabañas; i++) {
@@ -99,7 +110,6 @@ for (let i = 0; i < seleccionCabañas; i++) {
       } 
       
         else if (tipoDeCabaña == "Ancestral") {
-        event.preventDefault();
   
         fetch('/datos2', requestOptions)
         .then(response => {
@@ -117,9 +127,13 @@ for (let i = 0; i < seleccionCabañas; i++) {
           console.error('Error en la solicitud POST:', error);
         });
       }
+
+      // CAMBIO DEL VALOR DE RESERVA
+      localStorage.setItem('ReservaRealizada', reservaRealizada);
+      
+      // window.location.href = 'reserva-realizada.html';
   
   }
-  console.log('Tercero: ', precioTotal)
 
     let infoReserva = {
       'nombre': nombre,
@@ -132,7 +146,6 @@ for (let i = 0; i < seleccionCabañas; i++) {
       'acompanantes': acompanantes,
       'precio': precioTotal,
     }
-    console.log('Cuarto: ', precioTotal)
 
     const requestOptions = {
       method: 'POST',
@@ -157,4 +170,5 @@ for (let i = 0; i < seleccionCabañas; i++) {
     });
 
   }
+
 })

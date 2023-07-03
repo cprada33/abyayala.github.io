@@ -620,15 +620,16 @@ section .menu .carousel .carousel-inner .carousel-item #img-menu {
   padding: 20px 0;
 }
 .formularioReserva .formReserva {
-  padding: 0 40px 30px 40px;
+  padding: 0 40px 20px 40px;
 }
 .formularioReserva .botonFinal {
   text-align: center;
+  padding-bottom: 20px;
 }
 .formularioReserva #informacionPrevia {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   padding: 20px 0 0 0;
 }
 .formularioReserva #informacionPrevia .labeldatoInterno {
@@ -643,6 +644,44 @@ section .menu .carousel .carousel-inner .carousel-item #img-menu {
 .formularioReserva #informacionPrevia .datoInterno {
   display: inline;
   padding-top: 5px;
+}
+.formularioReserva #informacionPrevia .comprobante {
+  display: flex;
+  grid-column: 1/3;
+  justify-content: center;
+}
+
+.confirmacion .tituloConfirmacion {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 6.3rem;
+  text-align: center;
+  color: #00bbd6;
+  padding-top: 40px;
+}
+.confirmacion .textoConfirmacion {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.confirmacion p {
+  text-align: center;
+}
+.confirmacion p .menuConfirmacion {
+  font-style: unset;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: #f1bb1b;
+  text-align: center;
+}
+.confirmacion .imagenConfirmacion {
+  text-align: center;
+  width: 30%;
+  padding-bottom: 40px;
+  display: block;
+  margin: auto;
 }
 
 /* GENERAL */
