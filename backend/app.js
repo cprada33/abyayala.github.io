@@ -111,7 +111,7 @@ const upload = multer({
 // })
 
 app.post("/files",upload.single('archivo'), (req, res)=>{
-    res.status(200);
+  res.status(200).json({ message: 'Usuario creado exitosamente' });
 })
 
 

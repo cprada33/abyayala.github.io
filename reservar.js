@@ -51,9 +51,9 @@ if (tipoDeCabaña == 'Safari') {
 
 // ENVIO DE DATOS A TABLE DE RESERVA
 
-botonReservar.addEventListener('click', function(){
-  event.preventDefault();
-
+botonReservar.addEventListener('click', function(event){
+  // event.preventDefault();
+  
   let nombre = document.getElementById('nombre').value;
   let celular = document.getElementById('celular').value;
   let correo = document.getElementById('correo').value;
@@ -70,13 +70,18 @@ botonReservar.addEventListener('click', function(){
 
     // ENVIO DEL ARCHIVO 
     const archivo = document.getElementById('archivo').files[0];
-    console.log(archivo)
+    const formData = new FormData();
+    formData.append('archivo', archivo);
     
     fetch ('/files', {
       method: 'POST',
-      body: archivo
-    }).then(() => {
-      console.log('Archivo subido')
+      body: formData
+    })
+    .then(function (response){
+      if(response.ok) {
+        console.log('Antes de')
+        // window.location.href = 'reserva-realizada.html';
+      }
     });
 
     // ENVIO DE DATOS
@@ -130,8 +135,6 @@ for (let i = 0; i < seleccionCabañas; i++) {
 
       // CAMBIO DEL VALOR DE RESERVA
       localStorage.setItem('ReservaRealizada', reservaRealizada);
-      
-      // window.location.href = 'reserva-realizada.html';
   
   }
 

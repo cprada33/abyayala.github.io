@@ -51,72 +51,58 @@
 <main>
   <section class="formularioReserva">
       <h1>DATOS DE RESERVA</h1>
-      <!-- class="formReserva row g-3" -->
-      <form action="/files" method="post" enctype="multipart/form-data">
-          <div class="col-12">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre">
-            </div>
-          <div class="col-md-6">
-            <label for="celular" class="form-label">Celular</label>
-            <input minlength="10" type="text" class="form-control" id="celular">
-          </div>
-          <div class="col-md-6">
-            <label for="correo" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="correo">
-          </div>
-          <div class="col-md-6">
-              <label for="cedula" class="form-label">Cédula</label>
-              <input type="text" class="form-control" id="cedula">
+      <div class="formReserva row g-3">
+              <div class="col-12">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
+              </div>
+            <div class="col-md-6">
+              <label for="celular" class="form-label">Celular</label>
+              <input minlength="10" type="text" class="form-control" id="celular">
             </div>
             <div class="col-md-6">
-              <label for="huespedes" class="form-label">Número de huespedes</label>
-              <select class="form-select" aria-label="Habitaciones" id="huespedes">
-                <option selected value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-              </select>
+              <label for="correo" class="form-label">Correo</label>
+              <input type="email" class="form-control" id="correo">
             </div>
-          <div class="col-12">
-            <label for="acompañantes" class="form-label">Acompañantes</label>
-            <input type="text" class="form-control" id="acompañantes" placeholder="Nombres y número de cedulas">
-          </div>
-          <div id="informacionPrevia">
-              <p class="labeldatoInterno">TIPO DE CABAÑA: </p><p class="datoInterno" id="tipoCabaña"></p>
-              <p class="labeldatoInterno">CANTIDAD DE CABAÑAS: </p><p class="datoInterno" class="datoInterno" id="cantidadCabanas"></p>
-              <p class="labeldatoInterno">FECHA CHECK IN: </p><p class="datoInterno" id="fechaReservaIn"></p>
-              <p class="labeldatoInterno">FECHA CHECK OUT: </p><p class="datoInterno" id="fechaReservaOut"></p>
-              <p class="labeldatoInterno">PRECIO TOTAL: </p><p class="datoInterno" id="precioFinal"></p>
-              <div class="comprobante">
-                <p class="labeldatoInterno">COMPROBANTE DE PAGO: </p>
-                <input type="file" name="archivo" id="archivo">
+            <div class="col-md-6">
+                <label for="cedula" class="form-label">Cédula</label>
+                <input type="text" class="form-control" id="cedula">
               </div>
-          <section>
-            <p>REEMPLAZO</p>
-            <form action="/files" method="post" enctype="multipart/form-data" id="formulario">
-              <div>
-                  <input type="text" name="" id="">
+              <div class="col-md-6">
+                <label for="huespedes" class="form-label">Número de huespedes</label>
+                <select class="form-select" aria-label="Habitaciones" id="huespedes">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                </select>
               </div>
-              <div>
+            <div class="col-12">
+              <label for="acompañantes" class="form-label">Acompañantes</label>
+              <input type="text" class="form-control" id="acompañantes" placeholder="Nombres y número de cedulas">
+            </div>
+              <div id="informacionPrevia">
+                <p class="labeldatoInterno">TIPO DE CABAÑA: </p><p class="datoInterno" id="tipoCabaña"></p>
+                <p class="labeldatoInterno">CANTIDAD DE CABAÑAS: </p><p class="datoInterno" class="datoInterno" id="cantidadCabanas"></p>
+                <p class="labeldatoInterno">FECHA CHECK IN: </p><p class="datoInterno" id="fechaReservaIn"></p>
+                <p class="labeldatoInterno">FECHA CHECK OUT: </p><p class="datoInterno" id="fechaReservaOut"></p>
+                <p class="labeldatoInterno">PRECIO TOTAL: </p><p class="datoInterno" id="precioFinal"></p>
+                <div class="comprobante">
+                  <p class="labeldatoInterno">COMPROBANTE DE PAGO: </p>
                   <input type="file" name="archivo" id="archivo">
-              </div>
+                </div>
+          <section>
               <div>
-                  <button id="boton" value="Enviar">ENVIAR</button>
+                  <button id="reservar" value="Enviar" class="btn btn-primary">Finalizar reserva</button>
               </div>
-          </form>
+              <p id="errorDatos"></p>
           </section>
-
           </div>
-          <div class="botonFinal col-12">
-            <button id="reservar" class="btn btn-primary">Finalizar reserva</button>
-          </div>
-          <p id="errorDatos"></p>
-        </form>
+        </div>
   </section>
 </main>
 
