@@ -1,57 +1,42 @@
-let fechaIn = localStorage.getItem("fechaIn");
-let fechaOut = localStorage.getItem("fechaOut");
-let cantidadSafaris = 8;
-let cantidadAncestral = 1;
-let reservaRealizada = false;
+const fechaIn = localStorage.getItem('fechain');
+const fechaOut = localStorage.getItem('fechaout');
+const cantidadSafaris = 8;
+const cantidadAncestral = 1;
+const reservaRealizada = false;
+const cantidadDeCabanasSafari = document.getElementById('cantidadDeCabanasSafari');
+const cantidadDeCabanasAncestral = document.getElementById('cantidadDeCabanasAncestral');
 
 // DIVISON DE FECHAS
-function getDatesInRange(fechaIn, fechaOut){
-    let dates = [];
-    let currentDate = new Date(fechaIn);
-    let endDate = new Date(fechaOut);
-    let counts = {};
+function getDatesInRange (fechaIn, fechaOut) {
+  const dates = [];
+  const currentDate = new Date(fechaIn);
+  const endDate = new Date(fechaOut);
 
-    while (currentDate < endDate) {
-        let currentDateFormatted = currentDate.toISOString().slice(0, 10);
-        dates.push(currentDateFormatted);
+  while (currentDate.valueOf() < endDate.valueOf()) {
+    const currentDateFormatted = currentDate.toISOString().slice(0, 10);
+    dates.push(currentDateFormatted);
 
-        if (counts[currentDateFormatted]) {
-            counts[currentDateFormatted]++;
-          } else {
-            counts[currentDateFormatted] = 1;
-          }
-      
-          currentDate.setDate(currentDate.getDate() + 1);
-    }
-
-    let maxCount = 0;
-    let mostRepeatedDate = null;
-
-  for (let date in counts) {
-    if (counts[date] > maxCount) {
-      maxCount = counts[date];
-      mostRepeatedDate = date;
-    }
+    currentDate.setDate(currentDate.getDate() + 1);
   }
 
-    return { dates, mostRepeatedDate };
+  return { dates };
 }
 
-let solicitud = getDatesInRange(fechaIn, fechaOut);
+const solicitud = getDatesInRange(fechaIn, fechaOut);
+
 console.log('FECHAS SOLICITADAS: ', solicitud);
 
-//SOLICITUD DE TABLA DE FECHAS RESERVADAS SAFARI
+// SOLICITUD DE TABLA DE FECHAS RESERVADAS SAFARI
 let fechasReservadasSafari = [];
 
-function disponibilidadSafari(solicitud, fechasReservadasSafari){
-
+function disponibilidadSafari (solicitud, fechasReservadasSafari) {
   let ocupadasSafari = 0;
 
-  for (let i in solicitud) {
-      let element = solicitud[i];
+  for (const i in solicitud.dates) {
+    const element = solicitud.dates[i];
 
-      let ocurrences = fechasReservadasSafari.filter(item => item === element).length;
-      ocupadasSafari += ocurrences;
+    const ocurrences = fechasReservadasSafari.filter(item => item === element).length;
+    ocupadasSafari += ocurrences;
   }
 
   return ocupadasSafari;
@@ -65,53 +50,38 @@ fetch('/datos')
 
     // FUNCION PARA DETERMINAR DISPONIBILIDAD CON BASE DE DATOS
 
-    console.log(disponibilidadSafari())
+    console.log('disponibilidadSafari()', disponibilidadSafari(solicitud, fechasReservadasSafari));
 
-    let resultadoOcupadasSafari = cantidadSafaris - disponibilidadSafari(solicitud, fechasReservadasSafari);
-    console.log('RESULTADO DE OCUPADAS', resultadoOcupadasSafari);
+    const resultadoOcupadasSafari = cantidadSafaris - disponibilidadSafari(solicitud, fechasReservadasSafari);
+    console.log('RESULTADO DE OCUPADAS resultadoOcupadasSafari', resultadoOcupadasSafari);
 
     // RESULTADO DISPONIBILIDAD EN PANTALLA
-    let disponibilidadSafariLabel = document.getElementById('disponibilidad-safari');
-    disponibilidadSafariLabel.innerText = 'Cabañas disponibles: ' + resultadoOcupadasSafari ;
+    const disponibilidadSafariLabel = document.getElementById('disponibilidad-safari');
+    disponibilidadSafariLabel.innerText = 'Cabañas disponibles: ' + resultadoOcupadasSafari;
 
     // BLOQUEAR BOTON
 
-    if (resultadoOcupadasSafari == 0) {
+    if (resultadoOcupadasSafari === 0) {
       cantidadDeCabanasSafari.disabled = true;
       reservarSafari.innerText = 'NO HAY DISPONIBLE';
       reservarSafari.disabled = true;
     }
-
-    })
+  })
   .catch(error => {
     console.error('Error al obtener los datos:', error);
   });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-  //SOLICITUD DE TABLA DE FECHAS RESERVADAS ANCESTRAL
+// SOLICITUD DE TABLA DE FECHAS RESERVADAS ANCESTRAL
 let fechasReservadasAncestral = [];
 
-function disponibilidadAncestral(solicitud, fechasReservadasAncestral){
-
+function disponibilidadAncestral (solicitud, fechasReservadasAncestral) {
   let ocupadasAncestral = 0;
 
-  for (let i in solicitud) {
-      let element = solicitud[i];
+  for (const i in solicitud) {
+    const element = solicitud[i];
 
-      let ocurrences = fechasReservadasAncestral.filter(item => item === element).length;
-      ocupadasAncestral += ocurrences;
+    const ocurrences = fechasReservadasAncestral.filter(item => item === element).length;
+    ocupadasAncestral += ocurrences;
   }
 
   return ocupadasAncestral;
@@ -125,73 +95,55 @@ fetch('/datos2')
 
     // FUNCION PARA DETERMINAR DISPONIBILIDAD CON BASE DE DATOS
 
-    console.log(disponibilidadAncestral())
+    console.log(disponibilidadAncestral());
 
-    let resultadoOcupadasAncestral = cantidadAncestral - disponibilidadAncestral(solicitud, fechasReservadasAncestral);
-    console.log('RESULTADO DE OCUPADAS', resultadoOcupadasAncestral);
+    const resultadoOcupadasAncestral = cantidadAncestral - disponibilidadAncestral(solicitud, fechasReservadasAncestral);
+    console.log('RESULTADO DE OCUPADAS resultadoOcupadasAncestral', resultadoOcupadasAncestral);
 
     // RESULTADO DISPONIBILIDAD EN PANTALLA
-    let disponibilidadAncestralLabel = document.getElementById('disponibilidad-ancestral');
-    disponibilidadAncestralLabel.innerText = 'Cabañas disponibles: ' + resultadoOcupadasAncestral ;
+    const disponibilidadAncestralLabel = document.getElementById('disponibilidad-ancestral');
+    disponibilidadAncestralLabel.innerText = 'Cabañas disponibles: ' + resultadoOcupadasAncestral;
 
-    // BLOQUEAR BOTON 
-    if (resultadoOcupadasAncestral == 0) {
+    // BLOQUEAR BOTON
+    if (resultadoOcupadasAncestral === 0) {
       cantidadDeCabanasAncestral.disabled = true;
       reservarAncestral.innerText = 'NO HAY DISPONIBLE';
       reservarAncestral.disabled = true;
     }
-
-    })
+  })
   .catch(error => {
     console.error('Error al obtener los datos:', error);
   });
 
+// ENVIAR DATOS A LA PAGINA DE RESERVA
 
+// SAFARI
 
+const reservarSafari = document.getElementById('reservar-safari');
+const cantidadCabanasSafari = document.getElementById('cantidadDeCabanasSafari');
 
+reservarSafari.addEventListener('click', function () {
+  event.preventDefault();
+  const numCantidadCabanas = cantidadCabanasSafari.value;
+  localStorage.setItem('tipoDeCabaña', 'Safari');
+  localStorage.setItem('cantidadDeCabañas', numCantidadCabanas.toString());
+  localStorage.setItem('ReservaRealizada', reservaRealizada);
+  window.location.href = 'reservar.html';
+});
 
+// ANCESTRAL
 
+const reservarAncestral = document.getElementById('reservar-ancestral');
+const cantidadCabanasAncestral = document.getElementById('cantidadDeCabanasAncestral');
 
-
-
-
-
-
-
-
-
-
-
-
-//ENVIAR DATOS A LA PAGINA DE RESERVA
-
-  //SAFARI
-let reservarSafari = document.getElementById('reservar-safari');
-let cantidadCabanasSafari = document.getElementById('cantidadDeCabanasSafari');
-
-reservarSafari.addEventListener("click", function() {
-
-    event.preventDefault();
-    let numCantidadCabanas = cantidadCabanasSafari.value;
-    localStorage.setItem("tipoDeCabaña", 'Safari');
-    localStorage.setItem("cantidadDeCabañas", numCantidadCabanas.toString());
-    localStorage.setItem('ReservaRealizada', reservaRealizada);
-    window.location.href = 'reservar.html';
-})
-    //ANCESTRAL
-let reservarAncestral = document.getElementById('reservar-ancestral');
-let cantidadCabanasAncestral = document.getElementById('cantidadDeCabanasAncestral');
-
-reservarAncestral.addEventListener("click", function() {
-
-    event.preventDefault();
-    let numCantidadCabanas = cantidadCabanasAncestral.value;
-    localStorage.setItem("tipoDeCabaña", 'Ancestral');
-    localStorage.setItem("cantidadDeCabañas", numCantidadCabanas.toString());
-    localStorage.setItem('ReservaRealizada', reservaRealizada);
-    window.location.href = 'reservar.html';
-})
-
+reservarAncestral.addEventListener('click', function () {
+  event.preventDefault();
+  const numCantidadCabanas = cantidadCabanasAncestral.value;
+  localStorage.setItem('tipoDeCabaña', 'Ancestral');
+  localStorage.setItem('cantidadDeCabañas', numCantidadCabanas.toString());
+  localStorage.setItem('ReservaRealizada', reservaRealizada);
+  window.location.href = 'reservar.html';
+});
 
 // LIMITAR NUMERO DE CABAÑAS SAFARI SELECCIONABLES SEGÚN DISPONIBILIDAD
 
@@ -208,15 +160,13 @@ const options = [option1, option2, option3, option4, option5, option6, option7, 
 
 const btnListaCabanas = document.getElementById('cantidadDeCabanasSafari');
 btnListaCabanas.addEventListener('focus', function () {
-
-  let resultadoOcupadasSafari = cantidadSafaris - disponibilidadSafari(solicitud, fechasReservadasSafari);
+  const resultadoOcupadasSafari = cantidadSafaris - disponibilidadSafari(solicitud, fechasReservadasSafari);
   for (let i = 0; i < options.length; i++) {
-    let option = options[i];
-    let index = i + 1;
+    const option = options[i];
+    const index = i + 1;
 
     if (index > resultadoOcupadasSafari && resultadoOcupadasSafari > 0) {
       option.style.display = 'none';
-    } 
+    }
   }
-
-})
+});

@@ -51,8 +51,8 @@
 <main>
   <section class="formularioReserva">
       <h1>DATOS DE RESERVA</h1>
-      <div class="formReserva row g-3">
-              <div class="col-12">
+      <form action="/files" method="post" enctype="multipart/form-data" class="formReserva row g-3">
+              <div>
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="nombre">
               </div>
@@ -95,14 +95,12 @@
                   <p class="labeldatoInterno">COMPROBANTE DE PAGO: </p>
                   <input type="file" name="archivo" id="archivo">
                 </div>
-          <section>
-              <div>
-                  <button id="reservar" value="Enviar" class="btn btn-primary">Finalizar reserva</button>
+                <div class="botonFinal">
+                  <button id="reservar" class="btn btn-primary">Finalizar reserva</button>
+                </div>
+                <p id="errorDatos"></p>
               </div>
-              <p id="errorDatos"></p>
-          </section>
-          </div>
-        </div>
+            </form>
   </section>
 </main>
 
