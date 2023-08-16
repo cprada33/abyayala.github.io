@@ -77,10 +77,21 @@ botonReservar.addEventListener('click', function (event) {
       .then(function (response) {
         if (response.ok) {
           console.log('Antes de');
-          window.location.href = 'reserva-realizada.html';
+          // window.location.href = 'reserva-realizada.html';
         }
       });
 
+    // SOLICITUD idReservas
+    let idReservas = [];
+    fetch('/datos5')
+      .then(response => response.json())
+      .then(data => {
+        idReservas = data;
+        localStorage.setItem('codigoDeReserva', idReservas);
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+      });
     // ENVIO DE DATOS
     for (let i = 0; i < seleccionCabañas; i++) {
       const requestOptions = {
